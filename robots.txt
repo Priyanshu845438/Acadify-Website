@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /index.html
+Allow: /services/
+Allow: /portfolio.html
+Allow: /company/
+Allow: /contact.html
+Allow: /blog.html
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /config/
+
+# Allow all static assets
+Allow: /assets/
+Allow: /components/
+
+# Sitemap location
+Sitemap: https://techvision.in/sitemap.xml
+
+# Crawl delay (optional - 1 second)
+Crawl-delay: 1

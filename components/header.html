@@ -13,8 +13,16 @@
                 <li class="nav__item">
                     <a href="index.html" class="nav__link">Home</a>
                 </li>
-                <li class="nav__item">
-                    <a href="about.html" class="nav__link">About</a>
+                <li class="nav__item dropdown">
+                    <a href="#" class="nav__link">Company <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown__menu">
+                        <li><a href="company/overview.html" class="dropdown__link">Overview</a></li>
+                        <li><a href="company/core-values.html" class="dropdown__link">Core Values</a></li>
+                        <li><a href="company/why-choose-us.html" class="dropdown__link">Why Choose Us</a></li>
+                        <li><a href="company/dev-communities.html" class="dropdown__link">Dev Communities</a></li>
+                        <li><a href="company/projects.html" class="dropdown__link">Projects</a></li>
+                        <li><a href="contact.html" class="dropdown__link">Contact</a></li>
+                    </ul>
                 </li>
                 <li class="nav__item mega-menu">
                     <a href="#" class="nav__link">Solutions <i class="fas fa-chevron-down"></i></a>
@@ -64,6 +72,9 @@
                 <li class="nav__item">
                     <a href="faq.html" class="nav__link">FAQ</a>
                 </li>
+                <li class="nav__item">
+                    <a href="search.html" class="nav__link" title="Search Website"><i class="fas fa-search"></i></a>
+                </li>
             </ul>
         </div>
         
@@ -78,4 +89,100 @@
             <i class="fas fa-bars"></i>
         </div>
     </nav>
+    
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar" id="mobile-sidebar">
+        <div class="mobile-sidebar__overlay" id="sidebar-overlay"></div>
+        <div class="mobile-sidebar__content">
+            <div class="mobile-sidebar__header">
+                <div class="mobile-sidebar__logo">
+                    <i class="fas fa-cube"></i>
+                    TechVision
+                </div>
+                <button class="mobile-sidebar__close" id="sidebar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="mobile-sidebar__nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <a href="index.html" class="mobile-nav__link">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item has-submenu">
+                        <a href="#" class="mobile-nav__link" data-submenu="company">
+                            <i class="fas fa-building"></i>
+                            Company
+                            <i class="fas fa-chevron-right mobile-nav__arrow"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-company">
+                            <li><a href="company/overview.html" class="mobile-submenu__link">Overview</a></li>
+                            <li><a href="company/core-values.html" class="mobile-submenu__link">Core Values</a></li>
+                            <li><a href="company/why-choose-us.html" class="mobile-submenu__link">Why Choose Us</a></li>
+                            <li><a href="company/dev-communities.html" class="mobile-submenu__link">Dev Communities</a></li>
+                            <li><a href="company/projects.html" class="mobile-submenu__link">Projects</a></li>
+                            <li><a href="contact.html" class="mobile-submenu__link">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item has-submenu">
+                        <a href="#" class="mobile-nav__link" data-submenu="solutions">
+                            <i class="fas fa-cogs"></i>
+                            Solutions
+                            <i class="fas fa-chevron-right mobile-nav__arrow"></i>
+                        </a>
+                        <ul class="mobile-submenu" id="submenu-solutions">
+                            <li class="mobile-submenu__category">Digital Development</li>
+                            <li><a href="services/web-development.html" class="mobile-submenu__link">Enterprise Web Solutions</a></li>
+                            <li><a href="services/mobile-app-development.html" class="mobile-submenu__link">Mobile Applications</a></li>
+                            <li><a href="services/ui-ux-design.html" class="mobile-submenu__link">User Experience Design</a></li>
+                            <li class="mobile-submenu__category">Digital Marketing</li>
+                            <li><a href="services/digital-marketing.html" class="mobile-submenu__link">Strategic Marketing</a></li>
+                            <li><a href="services/seo-services.html" class="mobile-submenu__link">SEO Optimization</a></li>
+                            <li><a href="services/social-media-management.html" class="mobile-submenu__link">Social Media Strategy</a></li>
+                            <li><a href="services/graphic-design.html" class="mobile-submenu__link">Brand Design</a></li>
+                            <li class="mobile-submenu__category">Enterprise Technology</li>
+                            <li><a href="services/cloud-solutions.html" class="mobile-submenu__link">Cloud Infrastructure</a></li>
+                            <li><a href="services/cybersecurity.html" class="mobile-submenu__link">Security Solutions</a></li>
+                            <li><a href="services/it-consulting.html" class="mobile-submenu__link">Technology Consulting</a></li>
+                            <li><a href="services.html" class="mobile-submenu__link mobile-submenu__link--highlight">View All Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="portfolio.html" class="mobile-nav__link">
+                            <i class="fas fa-briefcase"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="blog.html" class="mobile-nav__link">
+                            <i class="fas fa-blog"></i>
+                            Insights
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="contact.html" class="mobile-nav__link">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="faq.html" class="mobile-nav__link">
+                            <i class="fas fa-question-circle"></i>
+                            FAQ
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-sidebar__cta">
+                    <a href="contact.html" class="btn btn--primary btn--block">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule Consultation
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
 </header>

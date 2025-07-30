@@ -8,12 +8,58 @@
     <meta name="keywords" content="IT company India, web development, mobile app development, digital marketing, SEO services, UI UX design, cloud solutions, cybersecurity, IT consulting, technology solutions India">
     <meta name="author" content="TechVision IT Solutions">
     <meta name="robots" content="index, follow">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#d7261e">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="TechVision IT Solutions | Leading IT Company in India">
     <meta property="og:description" content="Transform your business with cutting-edge technology solutions. Expert web development, digital marketing, and IT services in India.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://techvision.in">
     <meta property="og:image" content="https://techvision.in/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TechVision IT Solutions - Leading Technology Partner">
+    <meta property="og:site_name" content="TechVision IT Solutions">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@techvision">
+    <meta name="twitter:creator" content="@techvision">
+    <meta name="twitter:title" content="TechVision IT Solutions | Leading IT Company in India">
+    <meta name="twitter:description" content="Transform your business with cutting-edge technology solutions. Expert web development, digital marketing, and IT services in India.">
+    <meta name="twitter:image" content="https://techvision.in/assets/images/twitter-card.jpg">
+    <meta name="twitter:image:alt" content="TechVision IT Solutions - Leading Technology Partner">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="TechVision IT Solutions">
+    <meta name="msapplication-TileColor" content="#d7261e">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://techvision.in">
+    
+    <!-- Alternate Language -->
+    <link rel="alternate" hreflang="en-in" href="https://techvision.in">
+    <link rel="alternate" hreflang="hi-in" href="https://techvision.in/hi">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Sitemap Reference -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,14 +71,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <!-- Structured Data -->
+    <!-- Enhanced Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "TechVision IT Solutions",
+        "alternateName": "TechVision",
         "url": "https://techvision.in",
-        "logo": "https://techvision.in/assets/images/logo.png",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://techvision.in/assets/images/logos/logo.png",
+            "width": 300,
+            "height": 100
+        },
+        "image": "https://techvision.in/assets/images/og-image.jpg",
         "description": "Leading IT solutions provider in India offering web development, mobile apps, digital marketing, SEO, and IT consulting services.",
+        "foundingDate": "2015",
+        "founder": {
+            "@type": "Person",
+            "name": "TechVision Founders"
+        },
+        "numberOfEmployees": "50+",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "123 Tech Park, Sector 62",
@@ -41,18 +101,126 @@
             "postalCode": "201309",
             "addressCountry": "IN"
         },
-        "contactPoint": {
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.6139",
+            "longitude": "77.2090"
+        },
+        "contactPoint": [{
             "@type": "ContactPoint",
             "telephone": "+91-9876543210",
             "contactType": "customer service",
             "areaServed": "IN",
-            "availableLanguage": ["English", "Hindi"]
-        },
+            "availableLanguage": ["English", "Hindi"],
+            "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        }, {
+            "@type": "ContactPoint",
+            "email": "info@techvision.in",
+            "contactType": "customer support"
+        }],
         "sameAs": [
             "https://www.facebook.com/techvision",
             "https://www.linkedin.com/company/techvision",
-            "https://twitter.com/techvision"
+            "https://twitter.com/techvision",
+            "https://www.instagram.com/techvision",
+            "https://github.com/techvision"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IT Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Web Development",
+                        "description": "Custom website and web application development"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Mobile App Development",
+                        "description": "iOS and Android mobile application development"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Digital Marketing",
+                        "description": "SEO, social media marketing, and online advertising"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "award": [
+            "Best IT Company 2024",
+            "Top Web Development Agency",
+            "Excellence in Digital Marketing"
         ]
+    }
+    </script>
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TechVision IT Solutions",
+        "image": "https://techvision.in/assets/images/og-image.jpg",
+        "telephone": "+91-9876543210",
+        "email": "info@techvision.in",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Park, Sector 62",
+            "addressLocality": "Noida",
+            "addressRegion": "Uttar Pradesh",
+            "postalCode": "201309",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.6139",
+            "longitude": "77.2090"
+        },
+        "url": "https://techvision.in",
+        "openingHours": [
+            "Mo-Fr 09:00-18:00"
+        ],
+        "priceRange": "$$",
+        "servesCuisine": "Technology Services"
+    }
+    </script>
+    
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TechVision IT Solutions",
+        "url": "https://techvision.in",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://techvision.in/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
     }
     </script>
 </head>
@@ -310,6 +478,9 @@
             </div>
         </section>
     </main>
+
+    <!-- Include Testimonials -->
+    <div id="testimonials-placeholder"></div>
 
     <!-- Include Footer -->
     <div id="footer-placeholder"></div>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | TechVision IT Solutions</title>
+    <meta name="description" content="Explore TechVision's successful project portfolio featuring web development, mobile apps, digital marketing campaigns, and enterprise solutions.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title">Our Projects</h1>
+                    <p class="page-hero__description">
+                        Discover our successful projects across various industries and technologies, showcasing our expertise and innovation.
+                    </p>
+                    <nav class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb__link">Home</a>
+                        <span class="breadcrumb__separator">/</span>
+                        <span class="breadcrumb__current">Projects</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Categories -->
+        <section class="section">
+            <div class="container">
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Web Development Projects -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-card__image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Website">
+                            <div class="project-card__overlay">
+                                <a href="#" class="btn btn--primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__category">Web Development</div>
+                            <h3>Corporate Website Redesign</h3>
+                            <p>Complete website overhaul for a leading manufacturing company, improving user experience and mobile responsiveness.</p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="ecommerce web">
+                        <div class="project-card__image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-commerce Platform">
+                            <div class="project-card__overlay">
+                                <a href="#" class="btn btn--primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__category">E-commerce</div>
+                            <h3>Multi-vendor Marketplace</h3>
+                            <p>Comprehensive e-commerce platform supporting multiple vendors with integrated payment gateway and inventory management.</p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-card__image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mobile App">
+                            <div class="project-card__overlay">
+                                <a href="#" class="btn btn--primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__category">Mobile App</div>
+                            <h3>Food Delivery App</h3>
+                            <p>Cross-platform mobile application for food delivery with real-time tracking and payment integration.</p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="enterprise">
+                        <div class="project-card__image">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Enterprise Solution">
+                            <div class="project-card__overlay">
+                                <a href="#" class="btn btn--primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__category">Enterprise</div>
+                            <h3>HR Management System</h3>
+                            <p>Comprehensive HR management solution with employee portal, payroll processing, and performance tracking.</p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="web">
+                        <div class="project-card__image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Analytics">
+                            <div class="project-card__overlay">
+                                <a href="#" class="btn btn--primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__category">Web Application</div>
+                            <h3>Data Analytics Dashboard</h3>
+                            <p>Interactive dashboard for real-time data visualization and business intelligence reporting.</p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-card__image">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fitness App">
+                            <div class="project-card__overlay">
+                                <a href="#" class="btn btn--primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__category">Mobile App</div>
+                            <h3>Fitness Tracking App</h3>
+                            <p>Personal fitness application with workout plans, progress tracking, and social features.</p>
+                            <div class="project-card__tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Stats -->
+        <section class="section bg-gray">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Project Success Metrics</h2>
+                </div>
+                
+                <div class="stats-row">
+                    <div class="stat-block">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">On-Time Delivery</div>
+                    </div>
+                    <div class="stat-block">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

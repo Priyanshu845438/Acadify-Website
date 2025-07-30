@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('header-placeholder', 'components/header.html');
     loadComponent('footer-placeholder', 'components/footer.html');
     loadComponent('hero-placeholder', 'components/hero.html');
+    loadComponent('testimonials-placeholder', 'components/testimonials.html');
     
     // Initialize all components
     setTimeout(() => {
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeTeam();
         initializeCareers();
         initializeHero();
+        initializeLazyLoading();
+        initializePerformanceOptimizations();
+        initializeTestimonialsCarousel();
     }, 100);
 });
 
@@ -52,6 +56,11 @@ function loadComponent(placeholderId, componentPath) {
                 initializeHero();
                 initializeAnimations();
                 initializeCounters();
+            }
+            
+            // Initialize testimonials carousel if testimonials were loaded
+            if (placeholderId === 'testimonials-placeholder') {
+                initializeTestimonialsCarousel();
             }
         })
         .catch(error => {
@@ -93,25 +102,64 @@ function initializeNavigation() {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav__link');
     
-    // Mobile menu toggle
-    if (navToggle && navMenu) {
+    // Mobile sidebar elements
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav__link[data-submenu]');
+    
+    // Mobile menu toggle - open sidebar
+    if (navToggle && mobileSidebar) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('nav-open');
-            
-            // Update toggle icon
-            const icon = navToggle.querySelector('i');
-            if (icon) {
-                if (navMenu.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
+            mobileSidebar.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
     }
+    
+    // Close sidebar
+    function closeSidebar() {
+        if (mobileSidebar) {
+            mobileSidebar.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Close sidebar when clicking overlay
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    }
+    
+    // Close sidebar when clicking close button
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', closeSidebar);
+    }
+    
+    // Mobile submenu toggle
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const submenuId = this.getAttribute('data-submenu');
+            const submenu = document.getElementById(`submenu-${submenuId}`);
+            const parentItem = this.closest('.mobile-nav__item');
+            
+            if (submenu && parentItem) {
+                parentItem.classList.toggle('active');
+                
+                // Close other submenus
+                document.querySelectorAll('.mobile-nav__item.has-submenu.active').forEach(item => {
+                    if (item !== parentItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Close sidebar when clicking regular navigation links
+    const allMobileLinks = document.querySelectorAll('.mobile-submenu__link');
+    allMobileLinks.forEach(link => {
+        link.addEventListener('click', closeSidebar);
+    });
     
     // Close mobile menu when clicking on links
     if (navLinks) {
@@ -1121,17 +1169,336 @@ function initializePerformanceOptimizations() {
     });
 }
 
-// Initialize additional features when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    initializeLazyLoading();
-    initializeKeyboardNavigation();
-    initializePerformanceOptimizations();
-});
+/**
+ * Lazy Loading Implementation
+ */
+function initializeLazyLoading() {
+    // Check if Intersection Observer is supported
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    loadImage(img);
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+
+        // Observe all lazy images
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            img.classList.add('lazy-image', 'loading');
+            imageObserver.observe(img);
+        });
+    } else {
+        // Fallback for browsers without Intersection Observer
+        loadAllImages();
+    }
+}
+
+function loadImage(img) {
+    const src = img.getAttribute('data-src');
+    if (!src) return;
+    
+    img.addEventListener('load', () => {
+        img.classList.remove('loading');
+        img.classList.add('loaded');
+    });
+    
+    img.addEventListener('error', () => {
+        img.classList.remove('loading');
+        img.classList.add('error');
+    });
+    
+    img.src = src;
+    img.removeAttribute('data-src');
+}
+
+function loadAllImages() {
+    document.querySelectorAll('img[data-src]').forEach(loadImage);
+}
+
+/**
+ * Performance Optimizations
+ */
+function initializePerformanceOptimizations() {
+    // Preload critical resources
+    preloadCriticalResources();
+    
+    // Optimize font loading
+    optimizeFontLoading();
+    
+    // Initialize performance monitoring
+    initializePerformanceMonitoring();
+    
+    // Optimize third-party scripts
+    optimizeThirdPartyScripts();
+}
+
+function preloadCriticalResources() {
+    const criticalResources = [
+        { href: 'assets/css/style.css', as: 'style' },
+        { href: 'https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&display=swap', as: 'style' },
+        { href: 'components/header.html', as: 'fetch' },
+        { href: 'components/footer.html', as: 'fetch' }
+    ];
+    
+    criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource.href;
+        link.as = resource.as;
+        if (resource.as === 'style') {
+            link.onload = () => {
+                link.rel = 'stylesheet';
+            };
+        }
+        document.head.appendChild(link);
+    });
+}
+
+function optimizeFontLoading() {
+    // Add font-display: swap to improve loading performance
+    const fontLink = document.querySelector('link[href*="fonts.googleapis.com"]');
+    if (fontLink && !fontLink.href.includes('display=swap')) {
+        fontLink.href += '&display=swap';
+    }
+}
+
+function initializePerformanceMonitoring() {
+    // Monitor Core Web Vitals
+    if ('web-vital' in window) {
+        // This would be implemented with a web vitals library
+        console.log('Performance monitoring initialized');
+    }
+    
+    // Monitor page load performance
+    window.addEventListener('load', () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        console.log(`Page load time: ${loadTime}ms`);
+        
+        // Report to analytics (optional)
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_load_time', {
+                event_category: 'Performance',
+                value: Math.round(loadTime)
+            });
+        }
+    });
+}
+
+function optimizeThirdPartyScripts() {
+    // Defer non-critical scripts
+    document.querySelectorAll('script[data-defer]').forEach(script => {
+        script.defer = true;
+    });
+    
+    // Load analytics asynchronously
+    if (!document.querySelector('script[src*="google-analytics"]')) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.google-analytics.com/analytics.js';
+        document.head.appendChild(script);
+    }
+}
+
+/**
+ * Keyboard Navigation for Accessibility
+ */
+function initializeKeyboardNavigation() {
+    // Skip to main content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    skipLink.style.cssText = `
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: var(--color-primary);
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 1000;
+        transition: top 0.3s;
+    `;
+    
+    skipLink.addEventListener('focus', () => {
+        skipLink.style.top = '6px';
+    });
+    
+    skipLink.addEventListener('blur', () => {
+        skipLink.style.top = '-40px';
+    });
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
+    
+    // Enhanced keyboard navigation for dropdown menus
+    const dropdownTriggers = document.querySelectorAll('.nav__link, .mobile-nav__link');
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                trigger.click();
+            }
+        });
+    });
+}
 
 // Error handling
 window.addEventListener('error', function(e) {
     console.error('JavaScript error:', e.error);
 });
+
+/**
+ * Testimonials Carousel Functionality
+ */
+function initializeTestimonialsCarousel() {
+    const carousel = document.getElementById('testimonials-carousel');
+    if (!carousel) return;
+    
+    const track = document.getElementById('testimonials-track');
+    const prevBtn = document.getElementById('prev-testimonial');
+    const nextBtn = document.getElementById('next-testimonial');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    const slides = track.querySelectorAll('.testimonial-slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let autoPlayInterval;
+    
+    // Auto-play configuration
+    const autoPlayDelay = 5000; // 5 seconds
+    
+    function updateCarousel() {
+        const offset = -currentSlide * 100;
+        track.style.transform = `translateX(${offset}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateCarousel();
+        restartAutoPlay();
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+    
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+    }
+    
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+    
+    function restartAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+    }
+    
+    // Event listeners
+    prevBtn?.addEventListener('click', () => {
+        prevSlide();
+        restartAutoPlay();
+    });
+    
+    nextBtn?.addEventListener('click', () => {
+        nextSlide();
+        restartAutoPlay();
+    });
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+    
+    // Pause auto-play on hover
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoPlay();
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        startAutoPlay();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide(); // Swipe left - next slide
+            } else {
+                prevSlide(); // Swipe right - previous slide
+            }
+        }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (carousel.matches(':hover')) {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                restartAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                restartAutoPlay();
+            }
+        }
+    });
+    
+    // Initialize
+    updateCarousel();
+    startAutoPlay();
+    
+    // Intersection Observer for performance
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAutoPlay();
+                } else {
+                    stopAutoPlay();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(carousel);
+    }
+}
 
 // Service Worker for offline functionality (optional)
 if ('serviceWorker' in navigator) {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | TechVision IT Solutions</title>
+    <meta name="description" content="Search results for TechVision IT Solutions - Find services, projects, and information across our website.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+        <!-- Search Hero -->
+        <section class="search-hero">
+            <div class="container">
+                <div class="search-hero__content">
+                    <h1 class="search-hero__title">Search Results</h1>
+                    <div class="search-hero__form">
+                        <form class="search-form" id="search-form">
+                            <div class="search-input-wrapper">
+                                <input type="text" id="search-input" class="search-input" placeholder="Search services, projects, or information..." autocomplete="off">
+                                <button type="submit" class="search-submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="search-suggestions" id="search-suggestions"></div>
+                        </form>
+                    </div>
+                    <div class="search-stats" id="search-stats"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section class="search-results section">
+            <div class="container">
+                <div class="search-filters">
+                    <h3>Filter Results:</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Results</button>
+                        <button class="filter-btn" data-filter="services">Services</button>
+                        <button class="filter-btn" data-filter="projects">Projects</button>
+                        <button class="filter-btn" data-filter="company">Company</button>
+                        <button class="filter-btn" data-filter="blog">Blog</button>
+                    </div>
+                </div>
+                
+                <div class="results-container" id="results-container">
+                    <div class="no-results" id="no-results" style="display: none;">
+                        <div class="no-results__icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>No Results Found</h3>
+                        <p>Try adjusting your search terms or browse our services and portfolio.</p>
+                        <div class="no-results__suggestions">
+                            <h4>Popular Searches:</h4>
+                            <div class="suggestion-tags">
+                                <a href="?q=web+development" class="suggestion-tag">Web Development</a>
+                                <a href="?q=mobile+app" class="suggestion-tag">Mobile App</a>
+                                <a href="?q=digital+marketing" class="suggestion-tag">Digital Marketing</a>
+                                <a href="?q=seo+services" class="suggestion-tag">SEO Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination" id="pagination" style="display: none;">
+                    <button class="pagination-btn" id="prev-btn" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <span class="pagination-info" id="pagination-info">Page 1 of 1</span>
+                    <button class="pagination-btn" id="next-btn" disabled>
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+</html>
