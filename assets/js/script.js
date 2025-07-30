@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('testimonials-placeholder', 'components/testimonials.html');
     loadComponent('client-logos-placeholder', 'components/client-logos.html');
     
-    // Load testimonials slider script
-    loadScript('assets/js/testimonials-slider.js');
+    // Load premium testimonials script
+    loadScript('assets/js/testimonials-premium.js');
+    
+    // Load client logos script
+    loadScript('assets/js/client-logos.js');
     
     // Initialize all components
     setTimeout(() => {

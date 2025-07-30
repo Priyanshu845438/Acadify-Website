@@ -410,7 +410,6 @@ function initializePWAFeatures() {
             });
     }
     */
-    }
     
     // Install prompt
     let deferredPrompt;
@@ -446,7 +445,6 @@ function initializePWAFeatures() {
             });
         });
     }
-}
 
 /**
  * Testimonials Carousel Functionality - 3 Cards Per Row
@@ -614,3 +612,55 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeContactForm();
     }
 });
+
+// Missing function stubs to prevent errors
+function initializeLanguageSelector() { 
+    // Language selector implementation
+}
+
+function initializeNotificationSystem() { 
+    // Notification system implementation
+}
+
+function initializePerformanceMonitoring() { 
+    // Performance monitoring implementation
+}
+
+function initializeSmoothScrolling() { 
+    // Smooth scrolling implementation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+function initializeFAQ() { 
+    // FAQ implementation
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        }
+    });
+}
+
+function initializeContactForm() { 
+    // Contact form implementation
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form validation and submission logic here
+        });
+    }
+}
