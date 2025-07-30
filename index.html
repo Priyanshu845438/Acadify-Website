@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechVision IT Solutions - Leading Technology Company</title>
-    <meta name="description" content="TechVision IT Solutions provides cutting-edge technology services including web development, cloud solutions, cybersecurity, and IT consulting.">
+    <title>TechVision IT Solutions | Leading IT Company in India | Web Development, Digital Marketing, SEO Services</title>
+    <meta name="description" content="TechVision IT Solutions - Leading IT company in India offering web development, mobile apps, digital marketing, SEO, UI/UX design, cloud solutions, and cybersecurity services. Transform your business with innovative technology solutions.">
+    <meta name="keywords" content="IT company India, web development, mobile app development, digital marketing, SEO services, UI UX design, cloud solutions, cybersecurity, IT consulting, technology solutions India">
+    <meta name="author" content="TechVision IT Solutions">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="TechVision IT Solutions | Leading IT Company in India">
+    <meta property="og:description" content="Transform your business with cutting-edge technology solutions. Expert web development, digital marketing, and IT services in India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techvision.in">
+    <meta property="og:image" content="https://techvision.in/assets/images/og-image.jpg">
+    <link rel="canonical" href="https://techvision.in">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,323 +23,287 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TechVision IT Solutions",
+        "url": "https://techvision.in",
+        "logo": "https://techvision.in/assets/images/logo.png",
+        "description": "Leading IT solutions provider in India offering web development, mobile apps, digital marketing, SEO, and IT consulting services.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Park, Sector 62",
+            "addressLocality": "Noida",
+            "addressRegion": "Uttar Pradesh",
+            "postalCode": "201309",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9876543210",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+            "https://www.facebook.com/techvision",
+            "https://www.linkedin.com/company/techvision",
+            "https://twitter.com/techvision"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <a href="index.html" class="nav__logo">
-                    <i class="fas fa-cube"></i>
-                    TechVision
-                </a>
-            </div>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link active">Home</a>
-                    </li>
-                    <li class="nav__item dropdown">
-                        <a href="about.html" class="nav__link">About <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown__menu">
-                            <li><a href="about.html" class="dropdown__link">Our Story</a></li>
-                            <li><a href="team.html" class="dropdown__link">Team</a></li>
-                            <li><a href="careers.html" class="dropdown__link">Careers</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav__item">
-                        <a href="services.html" class="nav__link">Services</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="portfolio.html" class="nav__link">Portfolio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="blog.html" class="nav__link">Blog</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact.html" class="nav__link">Contact</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="faq.html" class="nav__link">FAQ</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero__background">
-                <img src="https://pixabay.com/get/g7b9d94a10d7f0c8c8dd990c73225bda78684c0a8d9c9ac9f40467f6d16a825dd1219c4d050c70e54dc83b2234a020f8c9a52c6a0f9c19a805dd54608628825b9_1280.jpg" alt="Modern IT Office" class="hero__bg-image">
-                <div class="hero__overlay"></div>
-            </div>
-            
-            <div class="hero__content container">
-                <div class="hero__data">
-                    <h1 class="hero__title">
-                        Transforming Businesses with
-                        <span class="text-gradient">Cutting-Edge Technology</span>
-                    </h1>
-                    <p class="hero__description">
-                        We deliver innovative IT solutions that drive digital transformation, 
-                        enhance security, and accelerate growth for businesses worldwide.
-                    </p>
-                    <div class="hero__buttons">
-                        <a href="services.html" class="btn btn--primary">
-                            <i class="fas fa-rocket"></i>
-                            Our Services
-                        </a>
-                        <a href="contact.html" class="btn btn--outline">
-                            <i class="fas fa-phone"></i>
-                            Get Started
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="hero__stats">
-                    <div class="stat">
-                        <h3 class="stat__number" data-target="500">0</h3>
-                        <p class="stat__text">Projects Completed</p>
-                    </div>
-                    <div class="stat">
-                        <h3 class="stat__number" data-target="150">0</h3>
-                        <p class="stat__text">Happy Clients</p>
-                    </div>
-                    <div class="stat">
-                        <h3 class="stat__number" data-target="24">0</h3>
-                        <p class="stat__text">24/7 Support</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero__scroll">
-                <a href="#services" class="hero__scroll-link">
-                    <i class="fas fa-mouse"></i>
-                    <span>Scroll Down</span>
-                </a>
-            </div>
-        </section>
+        <!-- Include Hero Section -->
+        <div id="hero-placeholder"></div>
 
-        <!-- Services Preview -->
-        <section class="services-preview section" id="services">
+        <!-- Services Section -->
+        <section class="services section" id="services">
             <div class="container">
-                <div class="section__header">
-                    <span class="section__subtitle">What We Do</span>
-                    <h2 class="section__title">Our Core Services</h2>
-                    <p class="section__description">
-                        We provide comprehensive IT solutions tailored to meet your business needs
+                <div class="section-header">
+                    <span class="section-subtitle">Our Expertise</span>
+                    <h2 class="section-title">Comprehensive IT Solutions for Your Business</h2>
+                    <p class="section-description">
+                        We offer a complete range of technology services designed to help businesses thrive in the digital landscape. 
+                        From web development to digital marketing, our expert team delivers results that matter.
                     </p>
                 </div>
                 
-                <div class="services__grid">
-                    <div class="service-card" data-aos="fade-up">
+                <div class="services-grid">
+                    <div class="service-card">
                         <div class="service-card__icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3 class="service-card__title">Web Development</h3>
-                        <p class="service-card__description">
-                            Custom web applications built with modern technologies and responsive design
-                        </p>
-                        <a href="services.html" class="service-card__link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-card__icon">
-                            <i class="fas fa-cloud"></i>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Web Development</h3>
+                            <p class="service-card__description">
+                                Custom websites and web applications built with modern technologies for optimal performance and user experience.
+                            </p>
+                            <a href="services/web-development.html" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
-                        <h3 class="service-card__title">Cloud Solutions</h3>
-                        <p class="service-card__description">
-                            Scalable cloud infrastructure and migration services for modern businesses
-                        </p>
-                        <a href="services.html" class="service-card__link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
                     </div>
                     
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-card__icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="service-card__title">Cybersecurity</h3>
-                        <p class="service-card__description">
-                            Comprehensive security solutions to protect your digital assets and data
-                        </p>
-                        <a href="services.html" class="service-card__link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
                         <div class="service-card__icon">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3 class="service-card__title">Mobile Development</h3>
-                        <p class="service-card__description">
-                            Native and cross-platform mobile applications for iOS and Android
-                        </p>
-                        <a href="services.html" class="service-card__link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Mobile App Development</h3>
+                            <p class="service-card__description">
+                                Native iOS and Android apps, plus cross-platform solutions that engage users and drive business growth.
+                            </p>
+                            <a href="services/mobile-app-development.html" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
                         <div class="service-card__icon">
-                            <i class="fas fa-cogs"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="service-card__title">IT Consulting</h3>
-                        <p class="service-card__description">
-                            Strategic technology consulting to optimize your business operations
-                        </p>
-                        <a href="services.html" class="service-card__link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Digital Marketing</h3>
+                            <p class="service-card__description">
+                                Data-driven marketing strategies including PPC, social media, content marketing, and email campaigns.
+                            </p>
+                            <a href="services/digital-marketing.html" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                     
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
                         <div class="service-card__icon">
-                            <i class="fas fa-database"></i>
+                            <i class="fas fa-search"></i>
                         </div>
-                        <h3 class="service-card__title">Data Analytics</h3>
-                        <p class="service-card__description">
-                            Advanced data analysis and business intelligence solutions
-                        </p>
-                        <a href="services.html" class="service-card__link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Preview -->
-        <section class="about-preview section">
-            <div class="container">
-                <div class="about-preview__content">
-                    <div class="about-preview__text" data-aos="fade-right">
-                        <span class="section__subtitle">About TechVision</span>
-                        <h2 class="section__title">Leading Innovation in Technology</h2>
-                        <p class="about-preview__description">
-                            With over a decade of experience, TechVision has been at the forefront of 
-                            digital transformation, helping businesses leverage technology to achieve 
-                            unprecedented growth and efficiency.
-                        </p>
-                        
-                        <div class="about-preview__features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>10+ Years of Excellence</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>500+ Successful Projects</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>24/7 Technical Support</span>
-                            </div>
-                        </div>
-                        
-                        <a href="about.html" class="btn btn--primary">
-                            Learn More About Us
-                        </a>
-                    </div>
-                    
-                    <div class="about-preview__image" data-aos="fade-left">
-                        <img src="https://pixabay.com/get/g97f228c3911be390544059630b4f612f8b22cec94b8da5ade54c1d23267e009150e19b3c3f03474dc6085e6d28ea46eaa9f4b6bc3e3619f0d0002890717c730e_1280.jpg" alt="Team collaboration" class="about-preview__img">
-                        <div class="about-preview__card">
-                            <h4>Award Winning Team</h4>
-                            <p>Recognized for excellence in IT solutions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Preview -->
-        <section class="portfolio-preview section">
-            <div class="container">
-                <div class="section__header">
-                    <span class="section__subtitle">Our Work</span>
-                    <h2 class="section__title">Featured Projects</h2>
-                    <p class="section__description">
-                        Discover some of our most successful projects and client solutions
-                    </p>
-                </div>
-                
-                <div class="portfolio__grid">
-                    <div class="portfolio-card" data-aos="zoom-in">
-                        <div class="portfolio-card__image">
-                            <img src="https://pixabay.com/get/g41cfd079dc7a4cd052d25bf2c712025aeb95f15db5f44812d1aeafc5bcf11667ebdbaed27644bece9a3702554e011cc63991f5cfb246d6f5963a7d9bce1cc259_1280.jpg" alt="E-commerce Platform">
-                            <div class="portfolio-card__overlay">
-                                <div class="portfolio-card__content">
-                                    <h4>E-commerce Platform</h4>
-                                    <p>Full-stack web application</p>
-                                    <a href="portfolio.html" class="btn btn--sm">View Details</a>
-                                </div>
-                            </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">SEO Services</h3>
+                            <p class="service-card__description">
+                                Boost your search rankings and organic traffic with proven SEO strategies and white-hat techniques.
+                            </p>
+                            <a href="services/seo-services.html" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     
-                    <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="portfolio-card__image">
-                            <img src="https://pixabay.com/get/g67ea64c8ef969a792954658e391cdc5901551542e03ecfb14b517c832f92e7f8a2e5f31ab82fb1b76648e87ca6133f4e186a809f9b5ae5acf34711e36047abd3_1280.jpg" alt="Cloud Migration">
-                            <div class="portfolio-card__overlay">
-                                <div class="portfolio-card__content">
-                                    <h4>Cloud Migration</h4>
-                                    <p>Enterprise cloud solution</p>
-                                    <a href="portfolio.html" class="btn btn--sm">View Details</a>
-                                </div>
-                            </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">UI/UX Design</h3>
+                            <p class="service-card__description">
+                                Create beautiful, intuitive designs that provide exceptional user experiences and drive conversions.
+                            </p>
+                            <a href="services/ui-ux-design.html" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     
-                    <div class="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="portfolio-card__image">
-                            <img src="https://pixabay.com/get/g6e7ad492b5947fbb88a14375f8ec09ad518cf7d396dd5db70ef53254012f408e701b9b23a95ecc9fc593e6ba1b8766122292038d430f2f8f0a89fe99e885f051_1280.jpg" alt="Mobile App">
-                            <div class="portfolio-card__overlay">
-                                <div class="portfolio-card__content">
-                                    <h4>Mobile Application</h4>
-                                    <p>Cross-platform mobile app</p>
-                                    <a href="portfolio.html" class="btn btn--sm">View Details</a>
-                                </div>
-                            </div>
+                    <div class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="service-card__content">
+                            <h3 class="service-card__title">Social Media Management</h3>
+                            <p class="service-card__description">
+                                Build your brand presence across social platforms with engaging content and targeted campaigns.
+                            </p>
+                            <a href="services/social-media-management.html" class="service-card__link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-preview__cta">
-                    <a href="portfolio.html" class="btn btn--outline">
-                        View All Projects
+                <div class="services-cta">
+                    <a href="services.html" class="btn btn--primary btn--large">
+                        <i class="fas fa-th-large"></i>
+                        View All Services
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta section">
+        <!-- About Section -->
+        <section class="about-preview section">
             <div class="container">
-                <div class="cta__content" data-aos="fade-up">
-                    <h2 class="cta__title">Ready to Transform Your Business?</h2>
-                    <p class="cta__description">
-                        Let's discuss how our technology solutions can drive your business forward
+                <div class="about-preview__content">
+                    <div class="about-preview__text">
+                        <span class="section-subtitle">About TechVision</span>
+                        <h2 class="section-title">Your Trusted Technology Partner in India</h2>
+                        <p class="section-description">
+                            With over 5+ years of experience, TechVision IT Solutions has been at the forefront of 
+                            digital transformation, helping businesses across India leverage technology for growth and success. 
+                            Our team of expert developers, designers, and marketers work together to deliver innovative solutions 
+                            that drive real results.
+                        </p>
+                        <div class="about-preview__features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>500+ Projects Completed Successfully</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>200+ Happy Clients Across India</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 Technical Support</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>99% Client Satisfaction Rate</span>
+                            </div>
+                        </div>
+                        <div class="about-preview__cta">
+                            <a href="about.html" class="btn btn--primary">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More About Us
+                            </a>
+                            <a href="portfolio.html" class="btn btn--outline">
+                                <i class="fas fa-briefcase"></i>
+                                View Our Work
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about-preview__image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="TechVision Team Working Together" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Why Choose TechVision</span>
+                    <h2 class="section-title">Leading IT Solutions Provider in India</h2>
+                    <p class="section-description">
+                        We combine technical expertise with business insight to deliver solutions that drive growth and success for your business.
                     </p>
-                    <div class="cta__buttons">
-                        <a href="contact.html" class="btn btn--primary">
-                            <i class="fas fa-paper-plane"></i>
+                </div>
+                
+                <div class="why-choose__grid">
+                    <div class="why-choose__card">
+                        <div class="why-choose__icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Expert Team</h3>
+                        <p>Skilled professionals with 5+ years of experience in cutting-edge technologies and industry best practices.</p>
+                    </div>
+                    
+                    <div class="why-choose__card">
+                        <div class="why-choose__icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Agile development process ensuring quick turnaround times without compromising on quality.</p>
+                    </div>
+                    
+                    <div class="why-choose__card">
+                        <div class="why-choose__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Solutions</h3>
+                        <p>Enterprise-grade security measures and best practices to protect your data and applications.</p>
+                    </div>
+                    
+                    <div class="why-choose__card">
+                        <div class="why-choose__icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock technical support and maintenance to ensure your systems run smoothly.</p>
+                    </div>
+                    
+                    <div class="why-choose__card">
+                        <div class="why-choose__icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Cost-Effective</h3>
+                        <p>Competitive pricing with transparent costs and no hidden fees for all our services.</p>
+                    </div>
+                    
+                    <div class="why-choose__card">
+                        <div class="why-choose__icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Proven Results</h3>
+                        <p>Track record of successful projects and satisfied clients with measurable business outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p>Get in touch with our experts and discover how we can help you achieve your technology goals.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn--primary btn--large">
+                            <i class="fas fa-phone"></i>
                             Get Free Consultation
                         </a>
-                        <a href="tel:+1234567890" class="btn btn--outline">
-                            <i class="fas fa-phone"></i>
-                            Call Us Now
+                        <a href="tel:+919876543210" class="btn btn--outline btn--large">
+                            <i class="fas fa-phone-alt"></i>
+                            Call Now: +91 9876543210
                         </a>
                     </div>
                 </div>
@@ -338,96 +311,16 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <div class="footer__brand">
-                        <a href="index.html" class="footer__logo">
-                            <i class="fas fa-cube"></i>
-                            TechVision
-                        </a>
-                        <p class="footer__description">
-                            Leading technology company providing innovative IT solutions 
-                            for businesses worldwide.
-                        </p>
-                        <div class="footer__social">
-                            <a href="#" class="social-link">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer__section">
-                    <h4 class="footer__title">Services</h4>
-                    <ul class="footer__links">
-                        <li><a href="services.html" class="footer__link">Web Development</a></li>
-                        <li><a href="services.html" class="footer__link">Cloud Solutions</a></li>
-                        <li><a href="services.html" class="footer__link">Cybersecurity</a></li>
-                        <li><a href="services.html" class="footer__link">Mobile Development</a></li>
-                        <li><a href="services.html" class="footer__link">IT Consulting</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__section">
-                    <h4 class="footer__title">Company</h4>
-                    <ul class="footer__links">
-                        <li><a href="about.html" class="footer__link">About Us</a></li>
-                        <li><a href="team.html" class="footer__link">Our Team</a></li>
-                        <li><a href="careers.html" class="footer__link">Careers</a></li>
-                        <li><a href="blog.html" class="footer__link">Blog</a></li>
-                        <li><a href="contact.html" class="footer__link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__section">
-                    <h4 class="footer__title">Contact Info</h4>
-                    <div class="footer__contact">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Tech Street, Digital City, TC 12345</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>info@techvision.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer__bottom">
-                <p class="footer__copyright">
-                    © 2024 TechVision IT Solutions. All rights reserved.
-                </p>
-                <div class="footer__legal">
-                    <a href="#" class="footer__legal-link">Privacy Policy</a>
-                    <a href="#" class="footer__legal-link">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- Custom JavaScript -->
     <script src="assets/js/script.js"></script>
+    <script>
+        // Load header, hero, and footer components
+        loadComponent('header-placeholder', 'components/header.html');
+        loadComponent('hero-placeholder', 'components/hero.html');
+        loadComponent('footer-placeholder', 'components/footer.html');
+    </script>
 </body>
 </html>

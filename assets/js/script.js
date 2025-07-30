@@ -18,7 +18,35 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeBlog();
     initializeTeam();
     initializeCareers();
+    initializeHero();
 });
+
+/**
+ * Component loading function
+ */
+function loadComponent(placeholderId, componentPath) {
+    const placeholder = document.getElementById(placeholderId);
+    if (!placeholder) return;
+    
+    fetch(componentPath)
+        .then(response => response.text())
+        .then(data => {
+            placeholder.innerHTML = data;
+            // Re-initialize navigation if header was loaded
+            if (placeholderId === 'header-placeholder') {
+                initializeNavigation();
+            }
+            // Initialize hero animations if hero was loaded
+            if (placeholderId === 'hero-placeholder') {
+                initializeHero();
+                initializeAnimations();
+                initializeCounters();
+            }
+        })
+        .catch(error => {
+            console.error('Error loading component:', error);
+        });
+}
 
 /**
  * Navigation functionality
@@ -33,39 +61,51 @@ function initializeNavigation() {
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            document.body.classList.toggle('nav-open');
             
             // Update toggle icon
             const icon = navToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+            if (icon) {
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     }
     
     // Close mobile menu when clicking on links
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                const icon = navToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+    if (navLinks) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (navMenu && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                    if (navToggle) {
+                        const icon = navToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                }
+            });
         });
-    });
+    }
     
     // Header scroll effect
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -894,6 +934,63 @@ function showNotification(message, type = 'info') {
                 element.parentElement.removeChild(element);
             }
         }, 300);
+    }
+}
+
+/**
+ * Hero section functionality
+ */
+function initializeHero() {
+    // Animated counters in hero stats
+    const statNumbers = document.querySelectorAll('.hero__stat-number[data-count]');
+    
+    statNumbers.forEach(number => {
+        const target = parseInt(number.getAttribute('data-count'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            number.textContent = Math.floor(current);
+        }, 16);
+    });
+    
+    // Floating animations for hero cards
+    const floatingCards = document.querySelectorAll('.hero__floating-card');
+    floatingCards.forEach((card, index) => {
+        // Add random floating animation
+        card.style.animationDelay = `${index * 0.5}s`;
+        card.classList.add('floating');
+    });
+    
+    // Parallax effect for hero background
+    const heroBackground = document.querySelector('.hero__background');
+    if (heroBackground) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            heroBackground.style.transform = `translateY(${rate}px)`;
+        });
+    }
+    
+    // Scroll indicator click
+    const scrollIndicator = document.querySelector('.hero__scroll-indicator a');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     }
 }
 
