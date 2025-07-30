@@ -4,25 +4,32 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Load header and footer components first
+    loadComponent('header-placeholder', 'components/header.html');
+    loadComponent('footer-placeholder', 'components/footer.html');
+    loadComponent('hero-placeholder', 'components/hero.html');
+    
     // Initialize all components
-    initializeNavigation();
-    initializeScrollEffects();
-    initializeAnimations();
-    initializeCounters();
-    initializeForms();
-    initializeModals();
-    initializeFilters();
-    initializeFAQ();
-    initializeBackToTop();
-    initializePortfolio();
-    initializeBlog();
-    initializeTeam();
-    initializeCareers();
-    initializeHero();
+    setTimeout(() => {
+        initializeNavigation();
+        initializeScrollEffects();
+        initializeAnimations();
+        initializeCounters();
+        initializeForms();
+        initializeModals();
+        initializeFilters();
+        initializeFAQ();
+        initializeBackToTop();
+        initializePortfolio();
+        initializeBlog();
+        initializeTeam();
+        initializeCareers();
+        initializeHero();
+    }, 100);
 });
 
 /**
- * Component loading function
+ * Component loading function with path fixing
  */
 function loadComponent(placeholderId, componentPath) {
     const placeholder = document.getElementById(placeholderId);
@@ -32,6 +39,10 @@ function loadComponent(placeholderId, componentPath) {
         .then(response => response.text())
         .then(data => {
             placeholder.innerHTML = data;
+            
+            // Fix navigation paths based on current page location
+            fixNavigationPaths(placeholder);
+            
             // Re-initialize navigation if header was loaded
             if (placeholderId === 'header-placeholder') {
                 initializeNavigation();
@@ -46,6 +57,31 @@ function loadComponent(placeholderId, componentPath) {
         .catch(error => {
             console.error('Error loading component:', error);
         });
+}
+
+/**
+ * Fix navigation paths to work from any page level
+ */
+function fixNavigationPaths(element) {
+    const currentPath = window.location.pathname;
+    const isInServicesFolder = currentPath.includes('/services/');
+    const pathPrefix = isInServicesFolder ? '../' : '';
+    
+    // Update all relative links in the loaded component
+    const links = element.querySelectorAll('a[href]');
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Skip external links, anchors, and already absolute paths
+        if (href.startsWith('http') || href.startsWith('#') || href.startsWith('/')) {
+            return;
+        }
+        
+        // For service folder pages, add ../ prefix to non-service links
+        if (isInServicesFolder && !href.startsWith('services/')) {
+            link.setAttribute('href', pathPrefix + href);
+        }
+    });
 }
 
 /**
