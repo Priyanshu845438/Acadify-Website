@@ -1625,17 +1625,39 @@ function initializeDarkModeToggle() {
     // Update toggle button icons
     updateToggleButtons(currentTheme);
     
-    // Add event listeners to both desktop and mobile toggle buttons
+    // Add event listeners to desktop and tablet toggle button (disabled only on mobile phones)
     const desktopToggle = document.getElementById('dark-mode-toggle');
-    const mobileToggle = document.getElementById('mobile-dark-toggle');
     
-    if (desktopToggle) {
+    // Enable dark mode on desktop and tablet (screen width > 768px)
+    if (desktopToggle && window.innerWidth > 768) {
         desktopToggle.addEventListener('click', toggleDarkMode);
     }
     
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', toggleDarkMode);
+    // Disable dark mode functionality only on mobile phones
+    function handleResize() {
+        const toggle = document.getElementById('dark-mode-toggle');
+        if (toggle) {
+            if (window.innerWidth <= 768) {
+                toggle.style.display = 'none';
+                // Force light mode on mobile phones only
+                if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            } else {
+                toggle.style.display = 'flex';
+                // Re-enable event listener for desktop/tablet
+                if (!toggle.hasAttribute('data-listener-added')) {
+                    toggle.addEventListener('click', toggleDarkMode);
+                    toggle.setAttribute('data-listener-added', 'true');
+                }
+            }
+        }
     }
+    
+    // Listen for window resize
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Call once on load
     
     function toggleDarkMode() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -1658,24 +1680,17 @@ function initializeDarkModeToggle() {
     }
     
     function updateToggleButtons(theme) {
-        const desktopIcon = document.querySelector('#dark-mode-toggle .fas');
-        const mobileIcon = document.querySelector('#mobile-dark-toggle .fas');
+        const toggleIcon = document.querySelector('#dark-mode-toggle .fas');
         
         if (theme === 'dark') {
             // Switch to sun icon for light mode
-            if (desktopIcon) {
-                desktopIcon.className = 'fas fa-sun';
-            }
-            if (mobileIcon) {
-                mobileIcon.className = 'fas fa-sun';
+            if (toggleIcon) {
+                toggleIcon.className = 'fas fa-sun';
             }
         } else {
             // Switch to moon icon for dark mode
-            if (desktopIcon) {
-                desktopIcon.className = 'fas fa-moon';
-            }
-            if (mobileIcon) {
-                mobileIcon.className = 'fas fa-moon';
+            if (toggleIcon) {
+                toggleIcon.className = 'fas fa-moon';
             }
         }
     }

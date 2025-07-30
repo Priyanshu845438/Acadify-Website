@@ -91,8 +91,8 @@ function initializeTestimonialObserver() {
 // Add CSS animations dynamically
 let testimonialStyles = `
     .testimonial-card {
-        opacity: 0;
-        transform: translateY(30px);
+        opacity: 1;
+        transform: translateY(0);
         transition: all 0.6s ease-out;
     }
     
