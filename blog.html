@@ -36,6 +36,210 @@
 
     <!-- Main Content -->
     <main class="main">
+        <!-- Blog Search and Filters -->
+        <section class="blog-search section">
+            <div class="container">
+                <div class="blog-search__content" data-aos="fade-up">
+                    <h2 class="blog-search__title">Explore Our Latest Insights</h2>
+                    <p class="blog-search__description">
+                        Stay updated with the latest technology trends, tips, and industry insights
+                    </p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search articles..." class="search-input" id="blog-search">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Categories -->
+        <section class="blog-categories section">
+            <div class="container">
+                <div class="blog-tabs">
+                    <button class="blog-tab active" data-category="all">All Posts</button>
+                    <button class="blog-tab" data-category="web-development">Web Development</button>
+                    <button class="blog-tab" data-category="mobile-apps">Mobile Apps</button>
+                    <button class="blog-tab" data-category="cloud-computing">Cloud Computing</button>
+                    <button class="blog-tab" data-category="cybersecurity">Cybersecurity</button>
+                    <button class="blog-tab" data-category="digital-marketing">Digital Marketing</button>
+                    <button class="blog-tab" data-category="ai-ml">AI & Machine Learning</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="blog-posts section">
+            <div class="container">
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Blog posts will be populated by JavaScript -->
+                    <div class="blog-card" data-category="web-development" data-aos="fade-up">
+                        <div class="blog-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="blog-category">Web Development</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 15, 2025</span>
+                                <span class="blog-read-time">5 min read</span>
+                            </div>
+                            <h3 class="blog-title">Modern Web Development Trends for 2025</h3>
+                            <p class="blog-excerpt">Discover the latest trends shaping web development including new frameworks, tools, and best practices that will define the industry this year.</p>
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <span class="author-name">John Developer</span>
+                                    <span class="author-role">Senior Frontend Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="mobile-apps" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="blog-category">Mobile Apps</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 12, 2025</span>
+                                <span class="blog-read-time">7 min read</span>
+                            </div>
+                            <h3 class="blog-title">React Native vs Flutter: Which is Right for You?</h3>
+                            <p class="blog-excerpt">Compare the two leading cross-platform mobile development frameworks and learn which one suits your project requirements best.</p>
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <span class="author-name">Sarah Mobile</span>
+                                    <span class="author-role">Mobile App Specialist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="cloud-computing" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="blog-category">Cloud Computing</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 10, 2025</span>
+                                <span class="blog-read-time">6 min read</span>
+                            </div>
+                            <h3 class="blog-title">AWS vs Azure vs Google Cloud: Complete Comparison</h3>
+                            <p class="blog-excerpt">An in-depth comparison of the three major cloud platforms, covering features, pricing, and use cases to help you make the right choice.</p>
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <span class="author-name">Mike Cloud</span>
+                                    <span class="author-role">Cloud Architect</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="cybersecurity" data-aos="fade-up" data-aos-delay="300">
+                        <div class="blog-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="blog-category">Cybersecurity</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 8, 2025</span>
+                                <span class="blog-read-time">8 min read</span>
+                            </div>
+                            <h3 class="blog-title">Essential Cybersecurity Practices for Small Businesses</h3>
+                            <p class="blog-excerpt">Protect your business from cyber threats with these essential security practices and tools every small business should implement.</p>
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <span class="author-name">Alex Security</span>
+                                    <span class="author-role">Cybersecurity Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="digital-marketing" data-aos="fade-up" data-aos-delay="400">
+                        <div class="blog-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="blog-category">Digital Marketing</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 5, 2025</span>
+                                <span class="blog-read-time">4 min read</span>
+                            </div>
+                            <h3 class="blog-title">SEO Strategies That Actually Work in 2025</h3>
+                            <p class="blog-excerpt">Learn the latest SEO techniques and strategies that can help improve your website's search engine rankings and drive organic traffic.</p>
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <span class="author-name">Lisa Marketing</span>
+                                    <span class="author-role">Digital Marketing Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-category="ai-ml" data-aos="fade-up" data-aos-delay="500">
+                        <div class="blog-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="blog-category">AI & Machine Learning</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">January 3, 2025</span>
+                                <span class="blog-read-time">9 min read</span>
+                            </div>
+                            <h3 class="blog-title">Getting Started with Machine Learning in Business</h3>
+                            <p class="blog-excerpt">A beginner's guide to implementing machine learning solutions in your business, from data collection to model deployment.</p>
+                            <div class="blog-author">
+                                <div class="author-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="author-info">
+                                    <span class="author-name">David AI</span>
+                                    <span class="author-role">ML Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container" data-aos="fade-up">
+                    <button class="btn btn--outline" id="load-more-posts">
+                        <i class="fas fa-plus"></i>
+                        Load More Articles
+                    </button>
+                </div>
+            </div>
+        </section>
         <!-- Featured Post -->
         <section class="featured-post section">
             <div class="container">
@@ -299,5 +503,59 @@
 
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/enhancements.js"></script>
+    <script>
+        // Blog-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeBlogFilters();
+            initializeBlogSearch();
+        });
+
+        function initializeBlogFilters() {
+            const tabs = document.querySelectorAll('.blog-tab');
+            const cards = document.querySelectorAll('.blog-card');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    const category = tab.dataset.category;
+                    
+                    // Filter cards
+                    cards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeInUp 0.5s ease-in-out';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        function initializeBlogSearch() {
+            const searchInput = document.getElementById('blog-search');
+            const cards = document.querySelectorAll('.blog-card');
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                
+                cards.forEach(card => {
+                    const title = card.querySelector('.blog-title').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    const category = card.querySelector('.blog-category').textContent.toLowerCase();
+                    
+                    if (title.includes(query) || excerpt.includes(query) || category.includes(query)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+    </script>
 </body>
 </html>

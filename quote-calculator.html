@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Calculator - TechVision IT Solutions</title>
+    <meta name="description" content="Get instant project quotes for web development, mobile apps, and IT services with our interactive calculator.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1 class="page-header__title">Project Quote Calculator</h1>
+                <p class="page-header__subtitle">Get Instant Pricing Estimates for Your Project</p>
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb__link">Home</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span class="breadcrumb__current">Quote Calculator</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Quote Calculator -->
+        <section class="quote-calculator section">
+            <div class="container">
+                <div class="calculator-layout">
+                    <!-- Calculator Form -->
+                    <div class="calculator-form" data-aos="fade-right">
+                        <div class="calculator-header">
+                            <h2>Project Details</h2>
+                            <p>Fill out the details below to get an instant quote estimate</p>
+                        </div>
+
+                        <form id="quote-calculator-form">
+                            <!-- Service Type -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">
+                                    <i class="fas fa-cogs"></i>
+                                    What service do you need?
+                                </h4>
+                                <div class="service-options">
+                                    <label class="service-option">
+                                        <input type="radio" name="service" value="web-development" data-base-price="5000">
+                                        <div class="service-card">
+                                            <i class="fas fa-code"></i>
+                                            <h5>Web Development</h5>
+                                            <p>Custom websites and web applications</p>
+                                            <span class="base-price">Starting at $5,000</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="service-option">
+                                        <input type="radio" name="service" value="mobile-app" data-base-price="15000">
+                                        <div class="service-card">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <h5>Mobile App</h5>
+                                            <p>iOS and Android applications</p>
+                                            <span class="base-price">Starting at $15,000</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="service-option">
+                                        <input type="radio" name="service" value="ecommerce" data-base-price="8000">
+                                        <div class="service-card">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <h5>E-commerce</h5>
+                                            <p>Online stores and marketplaces</p>
+                                            <span class="base-price">Starting at $8,000</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="service-option">
+                                        <input type="radio" name="service" value="ui-ux-design" data-base-price="3000">
+                                        <div class="service-card">
+                                            <i class="fas fa-paint-brush"></i>
+                                            <h5>UI/UX Design</h5>
+                                            <p>User interface and experience design</p>
+                                            <span class="base-price">Starting at $3,000</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="service-option">
+                                        <input type="radio" name="service" value="digital-marketing" data-base-price="2000">
+                                        <div class="service-card">
+                                            <i class="fas fa-bullhorn"></i>
+                                            <h5>Digital Marketing</h5>
+                                            <p>SEO, PPC, and social media marketing</p>
+                                            <span class="base-price">Starting at $2,000</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="service-option">
+                                        <input type="radio" name="service" value="it-consulting" data-base-price="1500">
+                                        <div class="service-card">
+                                            <i class="fas fa-handshake"></i>
+                                            <h5>IT Consulting</h5>
+                                            <p>Technology strategy and consulting</p>
+                                            <span class="base-price">Starting at $1,500</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Project Complexity -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">
+                                    <i class="fas fa-layer-group"></i>
+                                    Project Complexity
+                                </h4>
+                                <div class="complexity-slider">
+                                    <input type="range" id="complexity" name="complexity" min="1" max="3" value="2" step="1">
+                                    <div class="slider-labels">
+                                        <span>Simple</span>
+                                        <span>Medium</span>
+                                        <span>Complex</span>
+                                    </div>
+                                    <div class="complexity-description">
+                                        <span id="complexity-desc">Standard features with moderate customization</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Features -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    Additional Features
+                                </h4>
+                                <div class="features-grid">
+                                    <label class="feature-option">
+                                        <input type="checkbox" name="features" value="cms" data-price="1000">
+                                        <div class="feature-card">
+                                            <i class="fas fa-edit"></i>
+                                            <span>Content Management System</span>
+                                            <small>+$1,000</small>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="feature-option">
+                                        <input type="checkbox" name="features" value="payment" data-price="1500">
+                                        <div class="feature-card">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Payment Integration</span>
+                                            <small>+$1,500</small>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="feature-option">
+                                        <input type="checkbox" name="features" value="api" data-price="2000">
+                                        <div class="feature-card">
+                                            <i class="fas fa-plug"></i>
+                                            <span>API Integration</span>
+                                            <small>+$2,000</small>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="feature-option">
+                                        <input type="checkbox" name="features" value="analytics" data-price="800">
+                                        <div class="feature-card">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <span>Analytics Dashboard</span>
+                                            <small>+$800</small>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="feature-option">
+                                        <input type="checkbox" name="features" value="multilingual" data-price="1200">
+                                        <div class="feature-card">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Multi-language Support</span>
+                                            <small>+$1,200</small>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="feature-option">
+                                        <input type="checkbox" name="features" value="seo" data-price="600">
+                                        <div class="feature-card">
+                                            <i class="fas fa-search"></i>
+                                            <span>SEO Optimization</span>
+                                            <small>+$600</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Timeline -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Project Timeline
+                                </h4>
+                                <div class="timeline-options">
+                                    <label class="timeline-option">
+                                        <input type="radio" name="timeline" value="standard" data-multiplier="1">
+                                        <div class="timeline-card">
+                                            <h5>Standard</h5>
+                                            <p>3-6 months</p>
+                                            <span>Standard pricing</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="timeline-option">
+                                        <input type="radio" name="timeline" value="fast" data-multiplier="1.3">
+                                        <div class="timeline-card">
+                                            <h5>Fast Track</h5>
+                                            <p>1-3 months</p>
+                                            <span>+30% premium</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="timeline-option">
+                                        <input type="radio" name="timeline" value="rush" data-multiplier="1.6">
+                                        <div class="timeline-card">
+                                            <h5>Rush Job</h5>
+                                            <p>Under 1 month</p>
+                                            <span>+60% premium</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="form-section">
+                                <h4 class="form-section-title">
+                                    <i class="fas fa-user"></i>
+                                    Your Information
+                                </h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Name *" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email Address *" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea placeholder="Additional project details (optional)..." rows="3"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Quote Summary -->
+                    <div class="quote-summary" data-aos="fade-left">
+                        <div class="summary-sticky">
+                            <div class="summary-header">
+                                <h3>Project Quote</h3>
+                                <p>Instant estimate based on your selections</p>
+                            </div>
+
+                            <div class="quote-breakdown">
+                                <div class="quote-item base-service">
+                                    <span class="quote-label">Base Service</span>
+                                    <span class="quote-value" id="base-price">$0</span>
+                                </div>
+                                
+                                <div class="quote-item complexity-cost">
+                                    <span class="quote-label">Complexity Modifier</span>
+                                    <span class="quote-value" id="complexity-cost">×1.0</span>
+                                </div>
+                                
+                                <div class="quote-item features-cost">
+                                    <span class="quote-label">Additional Features</span>
+                                    <span class="quote-value" id="features-cost">+$0</span>
+                                </div>
+                                
+                                <div class="quote-item timeline-cost">
+                                    <span class="quote-label">Timeline Modifier</span>
+                                    <span class="quote-value" id="timeline-cost">×1.0</span>
+                                </div>
+                                
+                                <div class="quote-divider"></div>
+                                
+                                <div class="quote-total">
+                                    <span class="total-label">Estimated Total</span>
+                                    <span class="total-value" id="total-price">$0</span>
+                                </div>
+                                
+                                <div class="quote-range">
+                                    <p><strong>Project Range:</strong> <span id="price-range">$0 - $0</span></p>
+                                    <small>Final pricing may vary based on detailed requirements discussed during consultation.</small>
+                                </div>
+                            </div>
+
+                            <div class="quote-actions">
+                                <button type="submit" form="quote-calculator-form" class="btn btn--primary btn--full">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Request Detailed Quote
+                                </button>
+                                
+                                <button type="button" id="book-consultation" class="btn btn--outline btn--full">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Book Free Consultation
+                                </button>
+                            </div>
+
+                            <div class="guarantee-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <strong>Price Match Guarantee</strong>
+                                    <p>We'll match any comparable quote</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Our Calculator -->
+        <section class="calculator-benefits section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Why Use Our Quote Calculator?</h2>
+                    <p class="section__description">Get accurate estimates instantly with our intelligent pricing system</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card" data-aos="fade-up">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Instant Results</h4>
+                        <p>Get immediate price estimates without waiting for callbacks or meetings.</p>
+                    </div>
+                    
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Accurate Pricing</h4>
+                        <p>Based on real project data and industry standards for precise estimates.</p>
+                    </div>
+                    
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-cog"></i>
+                        <h4>Customizable</h4>
+                        <p>Adjust features, complexity, and timeline to match your exact needs.</p>
+                    </div>
+                    
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-handshake"></i>
+                        <h4>No Commitment</h4>
+                        <p>Explore pricing options with no obligation to proceed with the project.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/enhancements.js"></script>
+    <script src="assets/js/quote-calculator.js"></script>
+</body>
+</html>

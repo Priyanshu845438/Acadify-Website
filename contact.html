@@ -99,15 +99,22 @@
                             </p>
                         </div>
                         
-                        <form class="contact-form" id="contact-form">
+                        <form class="contact-form" id="contact-form" action="mailto:info@techvision.com" method="post" enctype="text/plain">
+                            <div class="form-success" id="form-success" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                            </div>
+                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName" class="form-label">First Name *</label>
                                     <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                    <span class="form-error" id="firstName-error"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="lastName" class="form-label">Last Name *</label>
                                     <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                    <span class="form-error" id="lastName-error"></span>
                                 </div>
                             </div>
                             
@@ -115,37 +122,39 @@
                                 <div class="form-group">
                                     <label for="email" class="form-label">Email Address *</label>
                                     <input type="email" id="email" name="email" class="form-input" required>
+                                    <span class="form-error" id="email-error"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone" class="form-label">Phone Number</label>
                                     <input type="tel" id="phone" name="phone" class="form-input">
+                                    <span class="form-error" id="phone-error"></span>
                                 </div>
                             </div>
                             
                             <div class="form-group">
-                                <label for="company" class="form-label">Company Name</label>
-                                <input type="text" id="company" name="company" class="form-input">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="service" class="form-label">Service Interested In *</label>
-                                <select id="service" name="service" class="form-select" required>
-                                    <option value="">Select a service</option>
+                                <label for="service" class="form-label">Service Interest</label>
+                                <select id="service" name="service" class="form-input">
+                                    <option value="">Select a service...</option>
                                     <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App Development</option>
                                     <option value="cloud-solutions">Cloud Solutions</option>
                                     <option value="cybersecurity">Cybersecurity</option>
-                                    <option value="mobile-development">Mobile Development</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="ui-ux-design">UI/UX Design</option>
                                     <option value="it-consulting">IT Consulting</option>
-                                    <option value="data-analytics">Data Analytics</option>
+                                    <option value="seo-services">SEO Services</option>
+                                    <option value="social-media">Social Media Management</option>
+                                    <option value="graphic-design">Graphic Design</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
                                 <label for="budget" class="form-label">Project Budget</label>
-                                <select id="budget" name="budget" class="form-select">
-                                    <option value="">Select budget range</option>
-                                    <option value="under-10k">Under $10,000</option>
+                                <select id="budget" name="budget" class="form-input">
+                                    <option value="">Select budget range...</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
                                     <option value="10k-25k">$10,000 - $25,000</option>
                                     <option value="25k-50k">$25,000 - $50,000</option>
                                     <option value="50k-100k">$50,000 - $100,000</option>
@@ -154,37 +163,130 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject" class="form-label">Subject *</label>
-                                <input type="text" id="subject" name="subject" class="form-input" required>
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" rows="6" required placeholder="Tell us about your project requirements..."></textarea>
+                                <span class="form-error" id="message-error"></span>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Tell us about your project requirements..." required></textarea>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
-                                    <input type="checkbox" name="newsletter" class="checkbox-input">
-                                    <span class="checkbox-mark"></span>
-                                    Subscribe to our newsletter for tech insights and updates
+                                    <input type="checkbox" id="agree" name="agree" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" class="form-link">Terms of Service</a> and <a href="#" class="form-link">Privacy Policy</a>
                                 </label>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="privacy" class="checkbox-input" required>
-                                    <span class="checkbox-mark"></span>
-                                    I agree to the <a href="#" class="link">Privacy Policy</a> and <a href="#" class="link">Terms of Service</a> *
-                                </label>
+                                <span class="form-error" id="agree-error"></span>
                             </div>
                             
                             <button type="submit" class="btn btn--primary btn--full">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
+                                <span class="btn-text">Send Message</span>
+                                <i class="fas fa-paper-plane btn-icon"></i>
                             </button>
                         </form>
                     </div>
+                    
+                    <!-- Google Maps Integration -->
+                    <div class="contact-map-container" data-aos="fade-left">
+                        <div class="contact-info-sidebar">
+                            <h3>Visit Our Office</h3>
+                            <div class="office-info">
+                                <div class="office-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <strong>Address</strong>
+                                        <p>123 Tech Street<br>Digital City, TC 12345<br>United States</p>
+                                    </div>
+                                </div>
+                                <div class="office-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>Business Hours</strong>
+                                        <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM<br>Sun: Closed</p>
+                                    </div>
+                                </div>
+                                <div class="office-item">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <strong>Phone</strong>
+                                        <p>+1 (555) 123-4567</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Interactive Map -->
+                        <div class="interactive-map" id="contact-map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153167!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1635749300000!5m2!1sen!2sau" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Consultation Booking -->
+        <section class="consultation-booking section">
+            <div class="container">
+                <div class="consultation-content" data-aos="fade-up">
+                    <div class="consultation-header">
+                        <h2>Book a Free Consultation</h2>
+                        <p>Ready to discuss your project? Schedule a free 30-minute consultation with our experts.</p>
+                    </div>
+                    
+                    <div class="consultation-grid">
+                        <div class="consultation-benefits">
+                            <h4>What You'll Get:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check"></i> Expert project assessment</li>
+                                <li><i class="fas fa-check"></i> Technology recommendations</li>
+                                <li><i class="fas fa-check"></i> Budget and timeline estimates</li>
+                                <li><i class="fas fa-check"></i> Custom solution planning</li>
+                                <li><i class="fas fa-check"></i> No obligation discussion</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="consultation-form">
+                            <form id="consultation-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Your Name *" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email Address *" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <input type="tel" placeholder="Phone Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <select required>
+                                            <option value="">Preferred Time</option>
+                                            <option value="morning">Morning (9 AM - 12 PM)</option>
+                                            <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                            <option value="evening">Evening (5 PM - 7 PM)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea placeholder="Brief project description..." rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--accent btn--full">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Schedule Free Consultation
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
                     
                     <div class="contact-sidebar" data-aos="fade-left">
                         <div class="contact-sidebar__content">
@@ -345,5 +447,6 @@
 
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/enhancements.js"></script>
 </body>
 </html>

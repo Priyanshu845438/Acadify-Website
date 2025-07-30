@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('footer-placeholder', 'components/footer.html');
     loadComponent('hero-placeholder', 'components/hero.html');
     loadComponent('testimonials-placeholder', 'components/testimonials.html');
+    loadComponent('client-logos-placeholder', 'components/client-logos.html');
     
     // Initialize all components
     setTimeout(() => {
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeLazyLoading();
         initializePerformanceOptimizations();
         initializeTestimonialsCarousel();
+        initializeDarkModeToggle();
+        initializeBackToTop();
+        initializeCookieConsent();
+        initializeMultiLanguage();
     }, 100);
 });
 
