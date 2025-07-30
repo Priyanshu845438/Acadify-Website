@@ -255,10 +255,13 @@
     
 
     <!-- Custom JavaScript -->
+
     <script src="../assets/js/script.js"></script>
     <script>
-        // Load header and footer components
-        loadComponent('header-placeholder', '../components/header.html');
+        document.addEventListener("DOMContentLoaded", function() {
+            loadComponent("header-placeholder", "../components/header.html");
+            loadComponent("footer-placeholder", "../components/footer.html");
+        });
     </script>
 </body>
 </html>

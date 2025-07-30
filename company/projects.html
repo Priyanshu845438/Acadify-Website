@@ -201,6 +201,13 @@
     <div id="footer-placeholder"></div>
 
     <!-- Custom JS -->
+
     <script src="../assets/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadComponent("header-placeholder", "../components/header.html");
+            loadComponent("footer-placeholder", "../components/footer.html");
+        });
+    </script>
 </body>
 </html>

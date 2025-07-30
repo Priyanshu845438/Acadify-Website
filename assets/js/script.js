@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load premium testimonials script with path adjustment
     const currentPath = window.location.pathname;
-    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/');
+    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/') || currentPath.includes('/industries/');
     const scriptPrefix = isInSubfolder ? '../' : '';
     
     loadScript(scriptPrefix + 'assets/js/testimonials-premium.js');
@@ -58,6 +58,25 @@ function loadScript(scriptPath) {
 }
 
 /**
+ * Load all basic components - can be called directly from pages
+ */
+function loadComponents() {
+    loadComponent('header-placeholder', 'components/header.html');
+    loadComponent('footer-placeholder', 'components/footer.html');
+    loadComponent('hero-placeholder', 'components/hero.html');
+    loadComponent('testimonials-placeholder', 'components/testimonials.html');
+    loadComponent('client-logos-placeholder', 'components/client-logos.html');
+    
+    // Load premium testimonials script with path adjustment
+    const currentPath = window.location.pathname;
+    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/') || currentPath.includes('/industries/');
+    const scriptPrefix = isInSubfolder ? '../' : '';
+    
+    loadScript(scriptPrefix + 'assets/js/testimonials-premium.js');
+    loadScript(scriptPrefix + 'assets/js/client-logos.js');
+}
+
+/**
  * Component loading function with path fixing
  */
 function loadComponent(placeholderId, componentPath) {
@@ -66,7 +85,7 @@ function loadComponent(placeholderId, componentPath) {
     
     // Determine the correct path based on current location
     const currentPath = window.location.pathname;
-    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/');
+    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/') || currentPath.includes('/industries/');
     const adjustedPath = isInSubfolder ? '../' + componentPath : componentPath;
     
     fetch(adjustedPath)

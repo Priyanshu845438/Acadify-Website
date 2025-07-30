@@ -89,7 +89,7 @@ function initializeTestimonialObserver() {
 }
 
 // Add CSS animations dynamically
-const testimonialStyles = `
+let testimonialStyles = `
     .testimonial-card {
         opacity: 0;
         transform: translateY(30px);
