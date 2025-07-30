@@ -59,176 +59,391 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Hero Section -->
-        <section class="page-hero">
+        <!-- Ultra-Modern Hero Section -->
+        <section class="projects-hero section section--hero">
+            <div class="projects-hero__background">
+                <div class="geometric-pattern"></div>
+                <div class="floating-elements">
+                    <div class="float-element float-element--1"></div>
+                    <div class="float-element float-element--2"></div>
+                    <div class="float-element float-element--3"></div>
+                </div>
+            </div>
             <div class="container">
-                <div class="page-hero__content">
-                    <h1 class="page-hero__title">Our Projects</h1>
-                    <p class="page-hero__description">
-                        Discover our successful projects across various industries and technologies, showcasing our expertise and innovation.
-                    </p>
-                    <nav class="breadcrumb">
-                        <a href="../index.html" class="breadcrumb__link">Home</a>
-                        <span class="breadcrumb__separator">/</span>
-                        <span class="breadcrumb__current">Projects</span>
-                    </nav>
+                <div class="projects-hero__content">
+                    <div class="projects-hero__text" data-aos="fade-up">
+                        <div class="breadcrumb-modern">
+                            <a href="../index.html" class="breadcrumb-modern__link">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                            <span class="breadcrumb-modern__separator">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <a href="overview.html" class="breadcrumb-modern__link">Company</a>
+                            <span class="breadcrumb-modern__separator">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <span class="breadcrumb-modern__current">Projects</span>
+                        </div>
+                        
+                        <div class="hero-badge">
+                            <i class="fas fa-rocket"></i>
+                            <span>Portfolio Excellence & Innovation Showcase</span>
+                        </div>
+                        
+                        <h1 class="projects-hero__title">
+                            Transforming Ideas Into
+                            <span class="title-highlight">Digital Success Stories</span>
+                        </h1>
+                        
+                        <p class="projects-hero__description">
+                            Explore our portfolio of 500+ successful projects spanning cutting-edge web applications, 
+                            mobile solutions, enterprise systems, and innovative digital platforms that have revolutionized 
+                            businesses across diverse industries in India and beyond.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <div class="hero-stat__number">500+</div>
+                                <div class="hero-stat__label">Projects Delivered</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat__number">250+</div>
+                                <div class="hero-stat__label">Happy Clients</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat__number">98%</div>
+                                <div class="hero-stat__label">Success Rate</div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <a href="#portfolio" class="btn btn--primary btn--large">
+                                <i class="fas fa-eye"></i>
+                                Explore Portfolio
+                            </a>
+                            <a href="../contact.html" class="btn btn--outline btn--large">
+                                <i class="fas fa-rocket"></i>
+                                Start Your Project
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="projects-hero__visual" data-aos="fade-left" data-aos-delay="200">
+                        <div class="hero-image-container">
+                            <div class="hero-image-frame">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                     alt="TechVision Project Development Team"
+                                     class="hero-image">
+                            </div>
+                            <div class="achievement-cards">
+                                <div class="achievement-card achievement-card--1">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div class="achievement-text">
+                                        <div class="achievement-number">50+</div>
+                                        <div class="achievement-label">Industry Awards</div>
+                                    </div>
+                                </div>
+                                <div class="achievement-card achievement-card--2">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="achievement-text">
+                                        <div class="achievement-number">300%</div>
+                                        <div class="achievement-label">Average ROI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Categories -->
-        <section class="section">
+        <!-- Modern Project Categories Section -->
+        <section id="portfolio" class="modern-projects-section section section--large">
             <div class="container">
-                <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="web">Web Development</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-                    <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <div class="modern-section-badge">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Our Project Portfolio</span>
+                    </div>
+                    <h2 class="modern-section-title">
+                        Showcasing <span class="title-highlight">Excellence Across Industries</span>
+                    </h2>
+                    <p class="modern-section-description">
+                        From cutting-edge web applications to revolutionary mobile solutions, our diverse portfolio 
+                        demonstrates our expertise across multiple technologies and industry verticals.
+                    </p>
                 </div>
                 
                 <div class="projects-grid">
-                    <!-- Web Development Projects -->
-                    <div class="project-card" data-category="web">
+                    <div class="project-card premium-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="project-card__image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Website">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Enterprise Portal - TechVision IT Solutions" 
+                                 loading="lazy">
                             <div class="project-card__overlay">
-                                <a href="#" class="btn btn--primary">View Details</a>
+                                <a href="#" class="btn btn--white">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Case Study
+                                </a>
                             </div>
                         </div>
-                        <div class="project-card__content">
-                            <div class="project-card__category">Web Development</div>
-                            <h3>Corporate Website Redesign</h3>
-                            <p>Complete website overhaul for a leading manufacturing company, improving user experience and mobile responsiveness.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                            </div>
+                        <div class="project-card__icon gradient-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="project-card__title">Manufacturing ERP System</h3>
+                        <p class="project-card__description">Complete enterprise resource planning solution integrating inventory management, production planning, and financial reporting with real-time analytics for a leading manufacturing company.</p>
+                        <div class="project-card__features">
+                            <span class="feature-tag">1,200+ Users</span>
+                            <span class="feature-tag">40% Efficiency Boost</span>
+                            <span class="feature-tag">8 Months Duration</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="ecommerce web">
+                    <div class="project-card premium-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="project-card__image">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-commerce Platform">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="E-commerce Marketplace - TechVision IT Solutions" 
+                                 loading="lazy">
                             <div class="project-card__overlay">
-                                <a href="#" class="btn btn--primary">View Details</a>
+                                <a href="#" class="btn btn--white">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    View Platform
+                                </a>
                             </div>
                         </div>
-                        <div class="project-card__content">
-                            <div class="project-card__category">E-commerce</div>
-                            <h3>Multi-vendor Marketplace</h3>
-                            <p>Comprehensive e-commerce platform supporting multiple vendors with integrated payment gateway and inventory management.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">Laravel</span>
-                                <span class="tech-tag">Vue.js</span>
-                                <span class="tech-tag">MySQL</span>
-                            </div>
+                        <div class="project-card__icon gradient-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3 class="project-card__title">Multi-vendor Marketplace</h3>
+                        <p class="project-card__description">Comprehensive e-commerce platform supporting multiple vendors with integrated payment gateway, inventory management, and advanced analytics dashboard for seamless operations.</p>
+                        <div class="project-card__features">
+                            <span class="feature-tag">500+ Vendors</span>
+                            <span class="feature-tag">₹2Cr+ GMV</span>
+                            <span class="feature-tag">Multi-Payment</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">MySQL</span>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="mobile">
+                    <div class="project-card premium-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="project-card__image">
-                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mobile App">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Food Delivery App - TechVision IT Solutions" 
+                                 loading="lazy">
                             <div class="project-card__overlay">
-                                <a href="#" class="btn btn--primary">View Details</a>
+                                <a href="#" class="btn btn--white">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    Download App
+                                </a>
                             </div>
                         </div>
-                        <div class="project-card__content">
-                            <div class="project-card__category">Mobile App</div>
-                            <h3>Food Delivery App</h3>
-                            <p>Cross-platform mobile application for food delivery with real-time tracking and payment integration.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Stripe</span>
-                            </div>
+                        <div class="project-card__icon gradient-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="project-card__title">TastyBites Food Delivery</h3>
+                        <p class="project-card__description">Cross-platform mobile application for food delivery with real-time tracking, multiple payment options, and AI-powered restaurant recommendations for enhanced user experience.</p>
+                        <div class="project-card__features">
+                            <span class="feature-tag">50K+ Downloads</span>
+                            <span class="feature-tag">4.8 Rating</span>
+                            <span class="feature-tag">Real-time Tracking</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="enterprise">
+                    <div class="project-card premium-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="project-card__image">
-                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Enterprise Solution">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="HR Management System - TechVision IT Solutions" 
+                                 loading="lazy">
                             <div class="project-card__overlay">
-                                <a href="#" class="btn btn--primary">View Details</a>
+                                <a href="#" class="btn btn--white">
+                                    <i class="fas fa-users-cog"></i>
+                                    View Demo
+                                </a>
                             </div>
                         </div>
-                        <div class="project-card__content">
-                            <div class="project-card__category">Enterprise</div>
-                            <h3>HR Management System</h3>
-                            <p>Comprehensive HR management solution with employee portal, payroll processing, and performance tracking.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">Angular</span>
-                                <span class="tech-tag">Spring Boot</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                            </div>
+                        <div class="project-card__icon gradient-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3 class="project-card__title">PeopleForce HRMS</h3>
+                        <p class="project-card__description">Comprehensive HR management solution with employee portal, payroll processing, performance tracking, and advanced reporting capabilities for streamlined workforce management.</p>
+                        <div class="project-card__features">
+                            <span class="feature-tag">2,000+ Employees</span>
+                            <span class="feature-tag">60% Time Saved</span>
+                            <span class="feature-tag">Advanced Analytics</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="web">
+                    <div class="project-card premium-card" data-aos="fade-up" data-aos-delay="500">
                         <div class="project-card__image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Analytics">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Analytics Dashboard - TechVision IT Solutions" 
+                                 loading="lazy">
                             <div class="project-card__overlay">
-                                <a href="#" class="btn btn--primary">View Details</a>
+                                <a href="#" class="btn btn--white">
+                                    <i class="fas fa-chart-bar"></i>
+                                    View Dashboard
+                                </a>
                             </div>
                         </div>
-                        <div class="project-card__content">
-                            <div class="project-card__category">Web Application</div>
-                            <h3>Data Analytics Dashboard</h3>
-                            <p>Interactive dashboard for real-time data visualization and business intelligence reporting.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">D3.js</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Redis</span>
-                            </div>
+                        <div class="project-card__icon gradient-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="project-card__title">Business Intelligence Suite</h3>
+                        <p class="project-card__description">Interactive dashboard for real-time data visualization, predictive analytics, and comprehensive business intelligence reporting across multiple data sources for informed decision making.</p>
+                        <div class="project-card__features">
+                            <span class="feature-tag">10TB+ Data</span>
+                            <span class="feature-tag">Real-time Updates</span>
+                            <span class="feature-tag">Predictive Analytics</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Redis</span>
                         </div>
                     </div>
                     
-                    <div class="project-card" data-category="mobile">
+                    <div class="project-card premium-card" data-aos="fade-up" data-aos-delay="600">
                         <div class="project-card__image">
-                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fitness App">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Fitness App - TechVision IT Solutions" 
+                                 loading="lazy">
                             <div class="project-card__overlay">
-                                <a href="#" class="btn btn--primary">View Details</a>
+                                <a href="#" class="btn btn--white">
+                                    <i class="fas fa-dumbbell"></i>
+                                    Try App
+                                </a>
                             </div>
                         </div>
-                        <div class="project-card__content">
-                            <div class="project-card__category">Mobile App</div>
-                            <h3>Fitness Tracking App</h3>
-                            <p>Personal fitness application with workout plans, progress tracking, and social features.</p>
-                            <div class="project-card__tech">
-                                <span class="tech-tag">Flutter</span>
-                                <span class="tech-tag">Dart</span>
-                                <span class="tech-tag">SQLite</span>
-                            </div>
+                        <div class="project-card__icon gradient-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3 class="project-card__title">FitLife Personal Trainer</h3>
+                        <p class="project-card__description">Personal fitness application with AI-powered workout plans, progress tracking, nutrition guidance, and social features for community motivation and wellness goals achievement.</p>
+                        <div class="project-card__features">
+                            <span class="feature-tag">25K+ Downloads</span>
+                            <span class="feature-tag">4.9 Rating</span>
+                            <span class="feature-tag">AI-Powered Plans</span>
+                        </div>
+                        <div class="project-card__tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">SQLite</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Stats -->
-        <section class="section bg-gray">
+        <!-- Project Success Metrics -->
+        <section class="section bg-light">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Project Success Metrics</h2>
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-subtitle">Project Success</span>
+                    <h2 class="section-title">Proven Results & Client Satisfaction</h2>
+                    <p class="section-description">
+                        Our track record speaks for itself with consistently high client satisfaction rates and project success metrics.
+                    </p>
                 </div>
                 
-                <div class="stats-row">
-                    <div class="stat-block">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Projects Completed</div>
+                <div class="stats-grid" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-card__icon gradient-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-card__number">500+</div>
+                        <div class="stat-card__label">Projects Completed</div>
+                        <div class="stat-card__description">Successfully delivered across 15+ industries</div>
                     </div>
-                    <div class="stat-block">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Client Satisfaction</div>
+                    
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-card__icon gradient-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-card__number">98%</div>
+                        <div class="stat-card__label">Client Satisfaction</div>
+                        <div class="stat-card__description">Measured through post-project surveys</div>
                     </div>
-                    <div class="stat-block">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">On-Time Delivery</div>
+                    
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-card__icon gradient-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-card__number">95%</div>
+                        <div class="stat-card__label">On-Time Delivery</div>
+                        <div class="stat-card__description">Projects delivered within agreed timelines</div>
                     </div>
-                    <div class="stat-block">
-                        <div class="stat-number">250+</div>
-                        <div class="stat-label">Happy Clients</div>
+                    
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stat-card__icon gradient-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-card__number">50+</div>
+                        <div class="stat-card__label">Industry Awards</div>
+                        <div class="stat-card__description">Recognition for innovation and excellence</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ready to Experience Section -->
+        <section class="section ready-section gradient-bg">
+            <div class="container">
+                <div class="ready-content text-center" data-aos="fade-up">
+                    <div class="ready-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h2 class="ready-title">Ready to Experience Project Excellence?</h2>
+                    <p class="ready-description">
+                        Join 250+ satisfied clients who have transformed their businesses with our innovative solutions. 
+                        Let's discuss how we can bring your vision to life with cutting-edge technology.
+                    </p>
+                    <div class="ready-actions">
+                        <a href="../contact.html" class="btn btn--white btn--large">
+                            <i class="fas fa-rocket"></i>
+                            Start Your Project
+                        </a>
+                        <a href="../portfolio.html" class="btn btn--outline-white btn--large">
+                            <i class="fas fa-eye"></i>
+                            View More Projects
+                        </a>
+                    </div>
+                    <div class="ready-features">
+                        <div class="ready-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Secure Development</span>
+                        </div>
+                        <div class="ready-feature">
+                            <i class="fas fa-handshake"></i>
+                            <span>No Long-term Commitment</span>
+                        </div>
+                        <div class="ready-feature">
+                            <i class="fas fa-clock"></i>
+                            <span>24-hour Response Time</span>
+                        </div>
                     </div>
                 </div>
             </div>
