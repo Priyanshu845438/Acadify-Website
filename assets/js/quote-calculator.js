@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initializeQuoteCalculator() {
     const form = document.getElementById('quote-calculator-form');
+    if (!form) return; // Exit if not on quote calculator page
+    
     const serviceInputs = document.querySelectorAll('input[name="service"]');
     const complexitySlider = document.getElementById('complexity');
     const featureInputs = document.querySelectorAll('input[name="features"]');
@@ -31,7 +33,10 @@ function initializeQuoteCalculator() {
     form.addEventListener('submit', handleQuoteSubmission);
     
     // Book consultation button
-    document.getElementById('book-consultation').addEventListener('click', bookConsultation);
+    const bookBtn = document.getElementById('book-consultation');
+    if (bookBtn) {
+        bookBtn.addEventListener('click', bookConsultation);
+    }
     
     // Initialize
     updateComplexityDescription();

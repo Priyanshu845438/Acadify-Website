@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('testimonials-placeholder', 'components/testimonials.html');
     loadComponent('client-logos-placeholder', 'components/client-logos.html');
     
+    // Load testimonials slider script
+    loadScript('assets/js/testimonials-slider.js');
+    
     // Initialize all components
     setTimeout(() => {
         initializeNavigation();
@@ -29,13 +32,23 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeHero();
         initializeLazyLoading();
         initializePerformanceOptimizations();
-        initializeTestimonialsCarousel();
-        initializeDarkModeToggle();
-        initializeBackToTop();
-        initializeCookieConsent();
-        initializeMultiLanguage();
+        // Only initialize if functions exist
+        if (typeof initializeDarkModeToggle === 'function') initializeDarkModeToggle();
+        if (typeof initializeBackToTop === 'function') initializeBackToTop();
+        if (typeof initializeCookieConsent === 'function') initializeCookieConsent();
+        if (typeof initializeMultiLanguage === 'function') initializeMultiLanguage();
     }, 100);
 });
+
+/**
+ * Script loading function
+ */
+function loadScript(scriptPath) {
+    const script = document.createElement('script');
+    script.src = scriptPath;
+    script.async = true;
+    document.head.appendChild(script);
+}
 
 /**
  * Component loading function with path fixing
