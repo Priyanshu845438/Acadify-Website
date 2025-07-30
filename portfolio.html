@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - TechVision IT Solutions</title>
+    <meta name="description" content="Explore our portfolio of successful IT projects and technology solutions delivered to clients worldwide.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">
+                    <i class="fas fa-cube"></i>
+                    TechVision
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="about.html" class="nav__link">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="about.html" class="dropdown__link">Our Story</a></li>
+                            <li><a href="team.html" class="dropdown__link">Team</a></li>
+                            <li><a href="careers.html" class="dropdown__link">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link active">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1 class="page-header__title">Our Portfolio</h1>
+                <p class="page-header__subtitle">Showcasing Our Best Work</p>
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb__link">Home</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span class="breadcrumb__current">Portfolio</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Portfolio Filter -->
+        <section class="portfolio-filter section">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Projects</button>
+                    <button class="filter-tab" data-filter="web">Web Development</button>
+                    <button class="filter-tab" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-tab" data-filter="cloud">Cloud Solutions</button>
+                    <button class="filter-tab" data-filter="security">Cybersecurity</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid section">
+            <div class="container">
+                <div class="portfolio__items">
+                    <!-- Web Development Projects -->
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/g41cfd079dc7a4cd052d25bf2c712025aeb95f15db5f44812d1aeafc5bcf11667ebdbaed27644bece9a3702554e011cc63991f5cfb246d6f5963a7d9bce1cc259_1280.jpg" alt="E-commerce Platform" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Web Development</div>
+                                    <h4 class="portfolio-item__title">E-commerce Platform</h4>
+                                    <p class="portfolio-item__description">
+                                        Full-featured online store with payment integration and inventory management
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">React</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="ecommerce">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/g3bd36dbaa2df1e86053e6de84fe6c631516e07f2e1e76b0848212dffd0d8c1f0beff7d4e638962449845e997dab090dbb84497d9eb56310316161e8a0bd24713_1280.jpg" alt="Corporate Website" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Web Development</div>
+                                    <h4 class="portfolio-item__title">Corporate Website</h4>
+                                    <p class="portfolio-item__description">
+                                        Modern responsive website with CMS integration and SEO optimization
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">WordPress</span>
+                                        <span class="tech-badge">PHP</span>
+                                        <span class="tech-badge">MySQL</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="corporate">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile App Projects -->
+                    <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/g6e7ad492b5947fbb88a14375f8ec09ad518cf7d396dd5db70ef53254012f408e701b9b23a95ecc9fc593e6ba1b8766122292038d430f2f8f0a89fe99e885f051_1280.jpg" alt="Fitness Tracking App" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Mobile Development</div>
+                                    <h4 class="portfolio-item__title">Fitness Tracking App</h4>
+                                    <p class="portfolio-item__description">
+                                        Cross-platform mobile app with real-time tracking and social features
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">React Native</span>
+                                        <span class="tech-badge">Firebase</span>
+                                        <span class="tech-badge">Redux</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="fitness">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/g8ed9277d2afc4ad68ab40c89814b360793fe13961aad0784bda9deb7c1bfaa53eac3a9700066fedc480004ae922ce807a98c956a6a04e28a5c3f83dda5913385_1280.jpg" alt="Banking App" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Mobile Development</div>
+                                    <h4 class="portfolio-item__title">Digital Banking App</h4>
+                                    <p class="portfolio-item__description">
+                                        Secure mobile banking solution with biometric authentication
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">Flutter</span>
+                                        <span class="tech-badge">Dart</span>
+                                        <span class="tech-badge">AWS</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="banking">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Solutions -->
+                    <div class="portfolio-item" data-category="cloud" data-aos="fade-up" data-aos-delay="400">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/g67ea64c8ef969a792954658e391cdc5901551542e03ecfb14b517c832f92e7f8a2e5f31ab82fb1b76648e87ca6133f4e186a809f9b5ae5acf34711e36047abd3_1280.jpg" alt="Cloud Migration" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Cloud Solutions</div>
+                                    <h4 class="portfolio-item__title">Enterprise Cloud Migration</h4>
+                                    <p class="portfolio-item__description">
+                                        Complete infrastructure migration to AWS cloud with 99.9% uptime
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">AWS</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">Kubernetes</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="migration">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="cloud" data-aos="fade-up" data-aos-delay="500">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/gb687765b41632eadc4df048af3bebc43a474a0bb1f2f52d8dca278ad8f5b042c7917c3579d6fe1950fd13c60267164ff7a967b1656e77e881a302da8602a34ba_1280.jpg" alt="SaaS Platform" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Cloud Solutions</div>
+                                    <h4 class="portfolio-item__title">SaaS Platform Development</h4>
+                                    <p class="portfolio-item__description">
+                                        Multi-tenant SaaS application with auto-scaling and global distribution
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">Azure</span>
+                                        <span class="tech-badge">Microservices</span>
+                                        <span class="tech-badge">Redis</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="saas">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Projects -->
+                    <div class="portfolio-item" data-category="security" data-aos="fade-up" data-aos-delay="600">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/g5c223a3cf3548fcb20c4e8c6607f8f277297e49b37a407e657c0266d8f08688bedba626e0dc1736bc990237930b6fa8e2b30041579146d76629920403e903dfb_1280.jpg" alt="Security Audit" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Cybersecurity</div>
+                                    <h4 class="portfolio-item__title">Enterprise Security Audit</h4>
+                                    <p class="portfolio-item__description">
+                                        Comprehensive security assessment and vulnerability remediation
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">Penetration Testing</span>
+                                        <span class="tech-badge">SIEM</span>
+                                        <span class="tech-badge">Compliance</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="audit">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="security" data-aos="fade-up" data-aos-delay="700">
+                        <div class="portfolio-item__image">
+                            <img src="https://pixabay.com/get/gbc314950b5636fa46b44a503fca1bd585e97628e4cb2c54d4946b16d290734e3d61aebca8275a66adc8a12b441b08022a4e8e2e94f6219fbd996b32ae7fb9243_1280.jpg" alt="Security Monitoring" class="portfolio-item__img">
+                            <div class="portfolio-item__overlay">
+                                <div class="portfolio-item__content">
+                                    <div class="portfolio-item__category">Cybersecurity</div>
+                                    <h4 class="portfolio-item__title">24/7 Security Monitoring</h4>
+                                    <p class="portfolio-item__description">
+                                        Real-time threat detection and incident response system
+                                    </p>
+                                    <div class="portfolio-item__tech">
+                                        <span class="tech-badge">SOC</span>
+                                        <span class="tech-badge">AI Detection</span>
+                                        <span class="tech-badge">Automation</span>
+                                    </div>
+                                    <div class="portfolio-item__actions">
+                                        <button class="btn btn--sm portfolio-modal-trigger" data-project="monitoring">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Statistics -->
+        <section class="project-stats section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Our Impact</span>
+                    <h2 class="section__title">Project Statistics</h2>
+                </div>
+                
+                <div class="stats__grid">
+                    <div class="stat-card" data-aos="fade-up">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="150">0</h3>
+                        <p class="stat-card__label">Web Applications</p>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="85">0</h3>
+                        <p class="stat-card__label">Mobile Apps</p>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="120">0</h3>
+                        <p class="stat-card__label">Cloud Deployments</p>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="stat-card__number" data-target="95">0</h3>
+                        <p class="stat-card__label">Security Audits</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta__content" data-aos="fade-up">
+                    <h2 class="cta__title">Ready to Start Your Next Project?</h2>
+                    <p class="cta__description">
+                        Let's create something amazing together
+                    </p>
+                    <div class="cta__buttons">
+                        <a href="contact.html" class="btn btn--primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Start Your Project
+                        </a>
+                        <a href="services.html" class="btn btn--outline">
+                            <i class="fas fa-cogs"></i>
+                            View Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Portfolio Modal -->
+    <div class="portfolio-modal" id="portfolio-modal">
+        <div class="portfolio-modal__overlay">
+            <div class="portfolio-modal__content">
+                <button class="portfolio-modal__close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="portfolio-modal__body">
+                    <div class="portfolio-modal__image">
+                        <img src="" alt="" id="modal-image">
+                    </div>
+                    
+                    <div class="portfolio-modal__info">
+                        <div class="portfolio-modal__category" id="modal-category"></div>
+                        <h3 class="portfolio-modal__title" id="modal-title"></h3>
+                        <p class="portfolio-modal__description" id="modal-description"></p>
+                        
+                        <div class="portfolio-modal__details">
+                            <div class="detail-item">
+                                <strong>Client:</strong>
+                                <span id="modal-client"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Duration:</strong>
+                                <span id="modal-duration"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Technologies:</strong>
+                                <div id="modal-tech" class="modal-tech-tags"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-modal__features">
+                            <h4>Key Features:</h4>
+                            <ul id="modal-features"></ul>
+                        </div>
+                        
+                        <div class="portfolio-modal__actions">
+                            <a href="contact.html" class="btn btn--primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Start Similar Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <i class="fas fa-cube"></i>
+                            TechVision
+                        </a>
+                        <p class="footer__description">
+                            Leading technology company providing innovative IT solutions 
+                            for businesses worldwide.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html" class="footer__link">Web Development</a></li>
+                        <li><a href="services.html" class="footer__link">Cloud Solutions</a></li>
+                        <li><a href="services.html" class="footer__link">Cybersecurity</a></li>
+                        <li><a href="services.html" class="footer__link">Mobile Development</a></li>
+                        <li><a href="services.html" class="footer__link">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="team.html" class="footer__link">Our Team</a></li>
+                        <li><a href="careers.html" class="footer__link">Careers</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contact Info</h4>
+                    <div class="footer__contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Street, Digital City, TC 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@techvision.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 TechVision IT Solutions. All rights reserved.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

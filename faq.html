@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TechVision IT Solutions</title>
+    <meta name="description" content="Find answers to frequently asked questions about TechVision's services, processes, and support.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">
+                    <i class="fas fa-cube"></i>
+                    TechVision
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="about.html" class="nav__link">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="about.html" class="dropdown__link">Our Story</a></li>
+                            <li><a href="team.html" class="dropdown__link">Team</a></li>
+                            <li><a href="careers.html" class="dropdown__link">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link active">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1 class="page-header__title">Frequently Asked Questions</h1>
+                <p class="page-header__subtitle">Find Quick Answers to Common Questions</p>
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb__link">Home</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span class="breadcrumb__current">FAQ</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- FAQ Search -->
+        <section class="faq-search section">
+            <div class="container">
+                <div class="faq-search__content" data-aos="fade-up">
+                    <h2 class="faq-search__title">How can we help you?</h2>
+                    <p class="faq-search__description">
+                        Search our knowledge base or browse categories below
+                    </p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for answers..." class="search-input" id="faq-search">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Categories -->
+        <section class="faq-categories section">
+            <div class="container">
+                <div class="faq-tabs">
+                    <button class="faq-tab active" data-category="general">General</button>
+                    <button class="faq-tab" data-category="services">Services</button>
+                    <button class="faq-tab" data-category="pricing">Pricing</button>
+                    <button class="faq-tab" data-category="technical">Technical</button>
+                    <button class="faq-tab" data-category="support">Support</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="faq-content section">
+            <div class="container">
+                <!-- General FAQs -->
+                <div class="faq-category" data-category="general">
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-aos="fade-up">
+                            <div class="faq-question">
+                                <h4>What services does TechVision offer?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>TechVision offers a comprehensive range of IT services including web development, cloud solutions, cybersecurity, mobile app development, IT consulting, and data analytics. We specialize in helping businesses leverage technology to improve their operations and achieve their goals.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-question">
+                                <h4>How long has TechVision been in business?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>TechVision was founded in 2013 and has been serving clients for over 10 years. During this time, we've completed over 500 projects and built a strong reputation for delivering high-quality technology solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="faq-question">
+                                <h4>Do you work with small businesses or only enterprises?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We work with businesses of all sizes, from startups and small businesses to large enterprises. Our solutions are scalable and can be tailored to meet the specific needs and budgets of different organizations.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-question">
+                                <h4>What industries do you serve?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We serve clients across various industries including healthcare, finance, retail, manufacturing, education, and technology. Our diverse experience allows us to understand industry-specific challenges and provide tailored solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="faq-question">
+                                <h4>Where is TechVision located?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our headquarters is located at 123 Tech Street, Digital City, TC 12345. We also have team members working remotely and can serve clients globally through our virtual collaboration tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services FAQs -->
+                <div class="faq-category" data-category="services" style="display: none;">
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-aos="fade-up">
+                            <div class="faq-question">
+                                <h4>How do you approach web development projects?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We follow a comprehensive approach that includes discovery, planning, design, development, testing, and deployment. We use modern frameworks like React, Angular, and Vue.js, and ensure all websites are responsive, fast, and SEO-optimized.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-question">
+                                <h4>What cloud platforms do you work with?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We're certified partners with major cloud providers including Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). We help clients choose the best platform based on their specific requirements and budget.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="faq-question">
+                                <h4>Do you develop mobile apps for both iOS and Android?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we develop native apps for both iOS and Android platforms, as well as cross-platform solutions using React Native and Flutter. We help you choose the best approach based on your target audience and requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-question">
+                                <h4>What cybersecurity services do you provide?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our cybersecurity services include security audits, penetration testing, vulnerability assessments, security monitoring, incident response, and compliance management. We help protect your digital assets from evolving cyber threats.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="faq-question">
+                                <h4>Can you help with digital transformation initiatives?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Our IT consulting team specializes in digital transformation. We assess your current technology landscape, identify opportunities for improvement, and develop strategic roadmaps to modernize your business operations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing FAQs -->
+                <div class="faq-category" data-category="pricing" style="display: none;">
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-aos="fade-up">
+                            <div class="faq-question">
+                                <h4>How do you price your services?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our pricing depends on the scope, complexity, and timeline of each project. We offer both fixed-price and time-and-materials models. After understanding your requirements, we provide detailed proposals with transparent pricing.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-question">
+                                <h4>Do you offer flexible payment terms?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer flexible payment terms to accommodate different business needs. Typically, we work with milestone-based payments for larger projects and monthly retainers for ongoing support services.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="faq-question">
+                                <h4>Is there a minimum project size or budget?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We work with projects of various sizes. While we don't have a strict minimum, our typical project engagements start around $5,000 for small websites and can go up to several hundred thousand dollars for complex enterprise solutions.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-question">
+                                <h4>What's included in your project quotes?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our quotes include all development work, testing, deployment, documentation, and initial training. We clearly outline what's included and any additional costs for hosting, third-party licenses, or ongoing maintenance.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="faq-question">
+                                <h4>Do you offer discounts for long-term contracts?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer preferential rates for long-term partnerships and retainer agreements. These arrangements benefit both parties by ensuring consistent collaboration and better project outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical FAQs -->
+                <div class="faq-category" data-category="technical" style="display: none;">
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-aos="fade-up">
+                            <div class="faq-question">
+                                <h4>What technologies and frameworks do you use?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We use a wide range of modern technologies including React, Angular, Vue.js, Node.js, Python, PHP, .NET, React Native, Flutter, AWS, Azure, Docker, Kubernetes, and many others. We choose technologies based on project requirements and best practices.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-question">
+                                <h4>How do you ensure code quality and security?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We follow industry best practices including code reviews, automated testing, security scanning, and continuous integration/deployment (CI/CD). Our development process includes multiple quality checkpoints to ensure robust, secure code.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="faq-question">
+                                <h4>Do you provide source code and documentation?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, all source code and intellectual property rights are transferred to you upon project completion. We also provide comprehensive documentation, including technical specifications, user manuals, and deployment guides.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-question">
+                                <h4>How do you handle data migration and integration?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We have extensive experience with data migration and system integration. We use proven methodologies to ensure data integrity, minimal downtime, and seamless integration with existing systems and third-party services.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="faq-question">
+                                <h4>What hosting and infrastructure recommendations do you provide?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We recommend hosting solutions based on your performance, security, and budget requirements. This may include shared hosting for simple sites, VPS for medium applications, or cloud infrastructure for scalable, enterprise-grade solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support FAQs -->
+                <div class="faq-category" data-category="support" style="display: none;">
+                    <div class="faq-accordion">
+                        <div class="faq-item" data-aos="fade-up">
+                            <div class="faq-question">
+                                <h4>What kind of support do you offer after project launch?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer comprehensive post-launch support including bug fixes, security updates, performance monitoring, content updates, feature enhancements, and technical assistance. We have various support packages to meet different needs and budgets.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-question">
+                                <h4>How quickly do you respond to support requests?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our standard response time is within 24 hours for general inquiries and within 4 hours for urgent issues. For critical system failures, we offer emergency support with response times as fast as 1 hour, depending on your support plan.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="faq-question">
+                                <h4>Do you provide training for our team?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide comprehensive training for your team members who will be managing or using the systems we develop. This includes user training, administrator training, and technical documentation to ensure smooth operations.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="faq-question">
+                                <h4>What if we need to make changes after the project is complete?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We understand that business needs evolve. We offer ongoing development services for feature additions, modifications, and enhancements. We can work on a project basis or through ongoing retainer agreements for continuous development.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="faq-question">
+                                <h4>Do you offer 24/7 monitoring and support?</h4>
+                                <i class="fas fa-plus faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer 24/7 monitoring and support services for mission-critical applications. This includes proactive monitoring, automated alerts, and immediate response to any issues to ensure maximum uptime and performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="faq-cta section">
+            <div class="container">
+                <div class="faq-cta__content" data-aos="fade-up">
+                    <h2 class="faq-cta__title">Still Have Questions?</h2>
+                    <p class="faq-cta__description">
+                        Can't find the answer you're looking for? Our team is here to help you with any questions or concerns.
+                    </p>
+                    <div class="faq-cta__buttons">
+                        <a href="contact.html" class="btn btn--primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        <a href="tel:+15551234567" class="btn btn--outline">
+                            <i class="fas fa-phone"></i>
+                            Call Us Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Resources -->
+        <section class="popular-resources section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Helpful Resources</span>
+                    <h2 class="section__title">Popular Resources</h2>
+                </div>
+                
+                <div class="resources__grid">
+                    <div class="resource-card" data-aos="fade-up">
+                        <div class="resource-card__icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4 class="resource-card__title">Technology Guides</h4>
+                        <p class="resource-card__description">
+                            Comprehensive guides on the latest technologies and best practices.
+                        </p>
+                        <a href="blog.html" class="resource-card__link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="resource-card__icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4 class="resource-card__title">Service Overview</h4>
+                        <p class="resource-card__description">
+                            Detailed information about all our services and capabilities.
+                        </p>
+                        <a href="services.html" class="resource-card__link">
+                            View Services <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="resource-card__icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="resource-card__title">Project Portfolio</h4>
+                        <p class="resource-card__description">
+                            See examples of our work and successful project implementations.
+                        </p>
+                        <a href="portfolio.html" class="resource-card__link">
+                            View Portfolio <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <i class="fas fa-cube"></i>
+                            TechVision
+                        </a>
+                        <p class="footer__description">
+                            Leading technology company providing innovative IT solutions 
+                            for businesses worldwide.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html" class="footer__link">Web Development</a></li>
+                        <li><a href="services.html" class="footer__link">Cloud Solutions</a></li>
+                        <li><a href="services.html" class="footer__link">Cybersecurity</a></li>
+                        <li><a href="services.html" class="footer__link">Mobile Development</a></li>
+                        <li><a href="services.html" class="footer__link">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="team.html" class="footer__link">Our Team</a></li>
+                        <li><a href="careers.html" class="footer__link">Careers</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contact Info</h4>
+                    <div class="footer__contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Street, Digital City, TC 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@techvision.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 TechVision IT Solutions. All rights reserved.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

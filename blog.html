@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TechVision IT Solutions</title>
+    <meta name="description" content="Stay updated with the latest technology trends, insights, and industry news from TechVision's expert team.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">
+                    <i class="fas fa-cube"></i>
+                    TechVision
+                </a>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="about.html" class="nav__link">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="about.html" class="dropdown__link">Our Story</a></li>
+                            <li><a href="team.html" class="dropdown__link">Team</a></li>
+                            <li><a href="careers.html" class="dropdown__link">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="portfolio.html" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link active">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="faq.html" class="nav__link">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1 class="page-header__title">Tech Insights Blog</h1>
+                <p class="page-header__subtitle">Latest Technology Trends & Industry Insights</p>
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb__link">Home</a>
+                    <span class="breadcrumb__separator">/</span>
+                    <span class="breadcrumb__current">Blog</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Featured Post -->
+        <section class="featured-post section">
+            <div class="container">
+                <div class="featured-post__content" data-aos="fade-up">
+                    <div class="featured-post__image">
+                        <img src="https://pixabay.com/get/g8775ac04ccdb8e9096c6306fe3e540d0016004e1a286c94857b7a049e1fdcd98f176499b6c4ebd5be716f88e3220f62c8a0ff139844732e23337b4702555a908_1280.jpg" alt="AI and Machine Learning" class="featured-post__img">
+                        <div class="featured-post__badge">Featured</div>
+                    </div>
+                    <div class="featured-post__info">
+                        <div class="featured-post__meta">
+                            <span class="post-category">Artificial Intelligence</span>
+                            <span class="post-date">January 25, 2024</span>
+                        </div>
+                        <h2 class="featured-post__title">
+                            <a href="blog-single.html">The Future of AI in Business: Transforming Industries with Machine Learning</a>
+                        </h2>
+                        <p class="featured-post__excerpt">
+                            Explore how artificial intelligence and machine learning are revolutionizing business 
+                            operations across industries. From predictive analytics to automated decision-making, 
+                            discover the transformative power of AI technologies.
+                        </p>
+                        <div class="featured-post__author">
+                            <img src="https://pixabay.com/get/g80a5eb578b5690252874692fb46a6e1ac5bff72fc99398069157c57c7952505148f91a892ba70c25610079667b2dc60c48f606f84d89136f948540eb415bb609_1280.jpg" alt="Author" class="author-avatar">
+                            <div class="author-info">
+                                <span class="author-name">Sarah Johnson</span>
+                                <span class="author-role">CEO & Tech Strategist</span>
+                            </div>
+                        </div>
+                        <a href="blog-single.html" class="btn btn--primary">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Filter -->
+        <section class="blog-filter section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="blog-search">
+                        <input type="text" placeholder="Search articles..." class="search-input" id="blog-search">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="blog-categories">
+                        <button class="category-btn active" data-category="all">All Posts</button>
+                        <button class="category-btn" data-category="ai">AI & ML</button>
+                        <button class="category-btn" data-category="cloud">Cloud Computing</button>
+                        <button class="category-btn" data-category="security">Cybersecurity</button>
+                        <button class="category-btn" data-category="development">Development</button>
+                        <button class="category-btn" data-category="trends">Tech Trends</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="blog-posts section">
+            <div class="container">
+                <div class="blog__grid">
+                    <article class="blog-card" data-category="cloud" data-aos="fade-up">
+                        <div class="blog-card__image">
+                            <img src="https://pixabay.com/get/gdaf8b9bab7ffacb1ebb04cf37a406920fc28f4c76780ad95a0443433937a7475ae03ef54451e2876761281c62de28c907412e98fa7f8a30e6540b9e6e72ce05b_1280.jpg" alt="Cloud Migration" class="blog-card__img">
+                            <div class="blog-card__category">Cloud Computing</div>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 20, 2024</span>
+                                <span class="blog-card__read-time">8 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                <a href="blog-single.html">Complete Guide to Cloud Migration: Best Practices and Strategies</a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Learn the essential steps for successful cloud migration, including planning, 
+                                execution, and optimization strategies for your business.
+                            </p>
+                            <div class="blog-card__author">
+                                <img src="https://pixabay.com/get/gdae3aa4b26e2c461ba0bc40a4cadc1b99213962f50f4c9cfc7e1e95c404cbda761ae7604a109c061075619b569bc0dc76c5abe543914f438790a712b741a6729_1280.jpg" alt="Michael Chen" class="author-avatar">
+                                <span class="author-name">Michael Chen</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="security" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-card__image">
+                            <img src="https://pixabay.com/get/g3bc82ebc357b8ae1cf34405b4d6a317276f6bf72732adf70b61781ecb4efeda180ef127508332c297bc352b3af9772057f63de98ae3dd653bcd7422f4b6af6ca_1280.jpg" alt="Cybersecurity" class="blog-card__img">
+                            <div class="blog-card__category">Cybersecurity</div>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 18, 2024</span>
+                                <span class="blog-card__read-time">6 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                <a href="blog-single.html">Zero Trust Security: Building Resilient Digital Infrastructure</a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Understand the principles of zero trust architecture and how to implement 
+                                robust security measures in today's threat landscape.
+                            </p>
+                            <div class="blog-card__author">
+                                <img src="https://pixabay.com/get/gac87ec319c2fc2723e9eda962ba12edd4fd147704caa45b591de1d9355f5991e504aa001f2f3f765bb766ccbb19ffe2f2322cf3db707d4e86f02bb03d4fd797c_1280.jpg" alt="Maria Garcia" class="author-avatar">
+                                <span class="author-name">Maria Garcia</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="development" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-card__image">
+                            <img src="https://pixabay.com/get/g473e70b764d2f80742b0ff5182e4313616b89837be105e7987bd1f6f54d8ea8bd04104cd34b1f2bda4df7b30ccc6de83460eeab00b6b9742a4e3daf3dd87d50b_1280.jpg" alt="React Development" class="blog-card__img">
+                            <div class="blog-card__category">Development</div>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 15, 2024</span>
+                                <span class="blog-card__read-time">10 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                <a href="blog-single.html">Modern React Development: Hooks, Context, and Performance Optimization</a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Dive deep into modern React development practices, including advanced hooks 
+                                usage and performance optimization techniques.
+                            </p>
+                            <div class="blog-card__author">
+                                <img src="https://pixabay.com/get/ge958dcc7f8797981292c5700c51ab96cea8c81548f487c96700597cd4c2a904264fb244e624b3769f84c634d578784fb98df57651d7c2938d3297cf561f7e17a_1280.jpg" alt="David Kim" class="author-avatar">
+                                <span class="author-name">David Kim</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="trends" data-aos="fade-up" data-aos-delay="300">
+                        <div class="blog-card__image">
+                            <img src="https://pixabay.com/get/g29177732d52bb2f320a49b052bffa1730d85b20160a03b45556d565d1c8dc9889a3980ba7eb88c2959e3ae49c5bd51ea3f838fb3b3687ba36d1e8bcf1ea14f8b_1280.jpg" alt="Tech Trends" class="blog-card__img">
+                            <div class="blog-card__category">Tech Trends</div>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 12, 2024</span>
+                                <span class="blog-card__read-time">7 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                <a href="blog-single.html">Tech Trends 2024: What to Expect in the Digital Landscape</a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Explore the emerging technologies and trends that will shape the digital 
+                                landscape in 2024 and beyond.
+                            </p>
+                            <div class="blog-card__author">
+                                <img src="https://pixabay.com/get/g80a5eb578b5690252874692fb46a6e1ac5bff72fc99398069157c57c7952505148f91a892ba70c25610079667b2dc60c48f606f84d89136f948540eb415bb609_1280.jpg" alt="Sarah Johnson" class="author-avatar">
+                                <span class="author-name">Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="ai" data-aos="fade-up" data-aos-delay="400">
+                        <div class="blog-card__image">
+                            <img src="https://pixabay.com/get/g49ae2e0895c1fc31c97efaf4a9c4b63a4b3f013f176dec313fc54badfeeac16406aa574b56eb20ae1f3ba503bbc6b9149682f78d2ae56bc7d06d71d55a822501_1280.jpg" alt="Machine Learning" class="blog-card__img">
+                            <div class="blog-card__category">AI & ML</div>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 10, 2024</span>
+                                <span class="blog-card__read-time">9 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                <a href="blog-single.html">Implementing Machine Learning in Small Business Operations</a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Practical guide to leveraging machine learning technologies for small and 
+                                medium-sized businesses to improve efficiency and decision-making.
+                            </p>
+                            <div class="blog-card__author">
+                                <img src="https://pixabay.com/get/gb5eb508d51b8ef741e4989def455db03c87b163db9af2d757d2320b6078fe2aa2e858b62e1525bd81e8b7a77e8d78b9bbbb3283f5e538ea7bc7da999126c491c_1280.jpg" alt="Lisa Thompson" class="author-avatar">
+                                <span class="author-name">Lisa Thompson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="development" data-aos="fade-up" data-aos-delay="500">
+                        <div class="blog-card__image">
+                            <img src="https://pixabay.com/get/g8ed9277d2afc4ad68ab40c89814b360793fe13961aad0784bda9deb7c1bfaa53eac3a9700066fedc480004ae922ce807a98c956a6a04e28a5c3f83dda5913385_1280.jpg" alt="Mobile Development" class="blog-card__img">
+                            <div class="blog-card__category">Development</div>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 8, 2024</span>
+                                <span class="blog-card__read-time">11 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                <a href="blog-single.html">Cross-Platform Mobile Development: React Native vs Flutter</a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Comprehensive comparison of React Native and Flutter frameworks for 
+                                cross-platform mobile application development.
+                            </p>
+                            <div class="blog-card__author">
+                                <img src="https://pixabay.com/get/g39bf2accd934f5a2bfaf0cb7d812ad22c16f3bd0c1264127bce01283d4736b2dace420f2bf6f79b79b3f5453f57304bbd7d7b37f16561ca1df826ac8b6c5e6f6_1280.png" alt="Alex Martinez" class="author-avatar">
+                                <span class="author-name">Alex Martinez</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination" data-aos="fade-up">
+                    <button class="pagination__btn pagination__prev" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <div class="pagination__numbers">
+                        <button class="pagination__number active">1</button>
+                        <button class="pagination__number">2</button>
+                        <button class="pagination__number">3</button>
+                        <span class="pagination__dots">...</span>
+                        <button class="pagination__number">8</button>
+                    </div>
+                    <button class="pagination__btn pagination__next">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter section">
+            <div class="container">
+                <div class="newsletter__content" data-aos="fade-up">
+                    <div class="newsletter__text">
+                        <h3 class="newsletter__title">Stay Updated with Tech Insights</h3>
+                        <p class="newsletter__description">
+                            Subscribe to our newsletter and receive the latest technology trends, 
+                            industry insights, and expert tips directly in your inbox.
+                        </p>
+                    </div>
+                    <form class="newsletter__form">
+                        <div class="newsletter__input-group">
+                            <input type="email" placeholder="Enter your email address" class="newsletter__input" required>
+                            <button type="submit" class="btn btn--primary newsletter__btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                        <p class="newsletter__privacy">
+                            By subscribing, you agree to our <a href="#">Privacy Policy</a> and 
+                            consent to receive updates from our blog.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <i class="fas fa-cube"></i>
+                            TechVision
+                        </a>
+                        <p class="footer__description">
+                            Leading technology company providing innovative IT solutions 
+                            for businesses worldwide.
+                        </p>
+                        <div class="footer__social">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html" class="footer__link">Web Development</a></li>
+                        <li><a href="services.html" class="footer__link">Cloud Solutions</a></li>
+                        <li><a href="services.html" class="footer__link">Cybersecurity</a></li>
+                        <li><a href="services.html" class="footer__link">Mobile Development</a></li>
+                        <li><a href="services.html" class="footer__link">IT Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="team.html" class="footer__link">Our Team</a></li>
+                        <li><a href="careers.html" class="footer__link">Careers</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contact Info</h4>
+                    <div class="footer__contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Street, Digital City, TC 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@techvision.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 TechVision IT Solutions. All rights reserved.
+                </p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
