@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('testimonials-placeholder', 'components/testimonials.html');
     loadComponent('client-logos-placeholder', 'components/client-logos.html');
     
-    // Load premium testimonials script
-    loadScript('assets/js/testimonials-premium.js');
+    // Load premium testimonials script with path adjustment
+    const currentPath = window.location.pathname;
+    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/');
+    const scriptPrefix = isInSubfolder ? '../' : '';
     
-    // Load client logos script
-    loadScript('assets/js/client-logos.js');
+    loadScript(scriptPrefix + 'assets/js/testimonials-premium.js');
+    loadScript(scriptPrefix + 'assets/js/client-logos.js');
     
     // Initialize all components
     setTimeout(() => {
@@ -35,8 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeHero();
         initializeLazyLoading();
         initializePerformanceOptimizations();
+        initializeStickyHeader();
+        // Initialize dark mode toggle
+        initializeDarkModeToggle();
         // Only initialize if functions exist
-        if (typeof initializeDarkModeToggle === 'function') initializeDarkModeToggle();
         if (typeof initializeBackToTop === 'function') initializeBackToTop();
         if (typeof initializeCookieConsent === 'function') initializeCookieConsent();
         if (typeof initializeMultiLanguage === 'function') initializeMultiLanguage();
@@ -60,7 +64,12 @@ function loadComponent(placeholderId, componentPath) {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) return;
     
-    fetch(componentPath)
+    // Determine the correct path based on current location
+    const currentPath = window.location.pathname;
+    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/');
+    const adjustedPath = isInSubfolder ? '../' + componentPath : componentPath;
+    
+    fetch(adjustedPath)
         .then(response => response.text())
         .then(data => {
             placeholder.innerHTML = data;
@@ -94,8 +103,7 @@ function loadComponent(placeholderId, componentPath) {
  */
 function fixNavigationPaths(element) {
     const currentPath = window.location.pathname;
-    const isInServicesFolder = currentPath.includes('/services/');
-    const pathPrefix = isInServicesFolder ? '../' : '';
+    const isInSubfolder = currentPath.includes('/services/') || currentPath.includes('/company/');
     
     // Update all relative links in the loaded component
     const links = element.querySelectorAll('a[href]');
@@ -107,9 +115,43 @@ function fixNavigationPaths(element) {
             return;
         }
         
-        // For service folder pages, add ../ prefix to non-service links
-        if (isInServicesFolder && !href.startsWith('services/')) {
-            link.setAttribute('href', pathPrefix + href);
+        // Skip if already has ../ prefix to avoid double prefixing
+        if (href.startsWith('../')) {
+            return;
+        }
+        
+        // For subfolder pages, add ../ prefix to relative links that don't already have it
+        if (isInSubfolder) {
+            // Special handling for different types of links
+            if (href.startsWith('services/') || href.startsWith('company/') || 
+                href.startsWith('components/') || href.startsWith('assets/') ||
+                href === 'index.html' || href === 'about.html' || href === 'contact.html' ||
+                href === 'portfolio.html' || href === 'blog.html' || href === 'team.html' ||
+                href === 'careers.html' || href === 'partners.html' || href === 'faq.html' ||
+                href === 'search.html' || href === 'quote-calculator.html') {
+                link.setAttribute('href', '../' + href);
+            }
+        }
+    });
+    
+    // Also fix src attributes for images and scripts
+    const images = element.querySelectorAll('img[src]');
+    images.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('#') && !src.startsWith('/') && !src.startsWith('../')) {
+            if (isInSubfolder && src.startsWith('assets/')) {
+                img.setAttribute('src', '../' + src);
+            }
+        }
+    });
+    
+    const scripts = element.querySelectorAll('script[src]');
+    scripts.forEach(script => {
+        const src = script.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('#') && !src.startsWith('/') && !src.startsWith('../')) {
+            if (isInSubfolder && src.startsWith('assets/')) {
+                script.setAttribute('src', '../' + src);
+            }
         }
     });
 }
@@ -164,14 +206,28 @@ function initializeNavigation() {
             const parentItem = this.closest('.mobile-nav__item');
             
             if (submenu && parentItem) {
-                parentItem.classList.toggle('active');
+                const isCurrentlyActive = parentItem.classList.contains('active');
                 
-                // Close other submenus
+                // Close all other submenus first
                 document.querySelectorAll('.mobile-nav__item.has-submenu.active').forEach(item => {
                     if (item !== parentItem) {
                         item.classList.remove('active');
+                        const otherSubmenu = item.querySelector('.mobile-submenu');
+                        if (otherSubmenu) {
+                            otherSubmenu.style.maxHeight = '0px';
+                        }
                     }
                 });
+                
+                // Toggle current submenu
+                if (isCurrentlyActive) {
+                    parentItem.classList.remove('active');
+                    submenu.style.maxHeight = '0px';
+                } else {
+                    parentItem.classList.add('active');
+                    // Calculate the actual height needed for smooth animation
+                    submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                }
             }
         });
     });
@@ -1518,6 +1574,104 @@ function initializeTestimonialsCarousel() {
         }, { threshold: 0.5 });
         
         observer.observe(carousel);
+    }
+}
+
+/**
+ * Sticky Header Functionality
+ */
+function initializeStickyHeader() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
+/**
+ * Dark Mode Toggle Functionality
+ */
+function initializeDarkModeToggle() {
+    // Get stored theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply saved theme
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Update toggle button icons
+    updateToggleButtons(currentTheme);
+    
+    // Add event listeners to both desktop and mobile toggle buttons
+    const desktopToggle = document.getElementById('dark-mode-toggle');
+    const mobileToggle = document.getElementById('mobile-dark-toggle');
+    
+    if (desktopToggle) {
+        desktopToggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    function toggleDarkMode() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Apply new theme
+        document.documentElement.setAttribute('data-theme', newTheme);
+        
+        // Save preference
+        localStorage.setItem('theme', newTheme);
+        
+        // Update toggle button icons
+        updateToggleButtons(newTheme);
+        
+        // Add smooth transition effect
+        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+        setTimeout(() => {
+            document.body.style.transition = '';
+        }, 300);
+    }
+    
+    function updateToggleButtons(theme) {
+        const desktopIcon = document.querySelector('#dark-mode-toggle .fas');
+        const mobileIcon = document.querySelector('#mobile-dark-toggle .fas');
+        
+        if (theme === 'dark') {
+            // Switch to sun icon for light mode
+            if (desktopIcon) {
+                desktopIcon.className = 'fas fa-sun';
+            }
+            if (mobileIcon) {
+                mobileIcon.className = 'fas fa-sun';
+            }
+        } else {
+            // Switch to moon icon for dark mode
+            if (desktopIcon) {
+                desktopIcon.className = 'fas fa-moon';
+            }
+            if (mobileIcon) {
+                mobileIcon.className = 'fas fa-moon';
+            }
+        }
+    }
+    
+    // Listen for system theme changes
+    if (window.matchMedia) {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        mediaQuery.addEventListener('change', (e) => {
+            // Only auto-switch if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                updateToggleButtons(newTheme);
+            }
+        });
     }
 }
 
