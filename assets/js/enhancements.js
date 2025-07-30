@@ -5,53 +5,10 @@
 
 /**
  * Dark/Light Mode Toggle
+ * Note: Dark mode toggle is handled in script.js - this function is removed to prevent duplicates
  */
-function initializeDarkModeToggle() {
-    // Create dark mode toggle button
-    const darkModeToggle = document.createElement('button');
-    darkModeToggle.className = 'dark-mode-toggle';
-    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    darkModeToggle.setAttribute('aria-label', 'Toggle dark mode');
-    darkModeToggle.setAttribute('title', 'Toggle dark/light mode');
-    
-    // Add to header
-    const header = document.querySelector('.header');
-    if (header) {
-        header.appendChild(darkModeToggle);
-    }
-    
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    
-    // Update toggle icon based on current theme
-    updateDarkModeIcon(darkModeToggle, currentTheme);
-    
-    // Toggle dark mode
-    darkModeToggle.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme');
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateDarkModeIcon(darkModeToggle, newTheme);
-        
-        // Add transition effect
-        darkModeToggle.style.transform = 'rotate(360deg)';
-        setTimeout(() => {
-            darkModeToggle.style.transform = 'rotate(0deg)';
-        }, 300);
-    });
-}
 
-function updateDarkModeIcon(button, theme) {
-    const icon = button.querySelector('i');
-    if (theme === 'dark') {
-        icon.className = 'fas fa-sun';
-    } else {
-        icon.className = 'fas fa-moon';
-    }
-}
+
 
 /**
  * Back to Top Button
