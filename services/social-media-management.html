@@ -4,194 +4,950 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Management Services in India | Facebook, Instagram, LinkedIn Marketing | TechVision IT Solutions</title>
-    <meta name="description" content="Professional social media management services in India. Boost your brand presence on Facebook, Instagram, LinkedIn, Twitter. Content creation, social advertising, and community management by experts.">
-    <meta name="keywords" content="social media management India, Facebook marketing, Instagram marketing, LinkedIn marketing, social media advertising, content creation, community management, social media strategy">
+    <meta name="description" content="Professional social media management services in India. Build your brand, engage customers, and drive sales through strategic social media marketing across Facebook, Instagram, LinkedIn, and Twitter.">
+    <meta name="keywords" content="social media management India, Facebook marketing, Instagram marketing, LinkedIn marketing, Twitter marketing, social media strategy, content creation, community management, social media advertising">
     <meta name="author" content="TechVision IT Solutions">
     <meta name="robots" content="index, follow">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Page-specific Styles -->
+    <style>
+        /* Modern Technologies Section */
+        .modern-technologies-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 50%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .modern-technologies-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(215, 38, 30, 0.02) 0%, transparent 70%),
+                radial-gradient(circle at 80% 20%, rgba(7, 7, 74, 0.02) 0%, transparent 70%);
+        }
+        
+        .section-header-modern {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-badge i {
+            color: var(--color-primary);
+        }
+        
+        .section-title-modern {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-description-modern {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tech-category {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-category:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--color-primary);
+        }
+        
+        .tech-category-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+            text-align: center;
+        }
+        
+        .tech-category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text-dark);
+            margin: 0;
+        }
+        
+        .tech-list-modern {
+            margin-top: 1rem;
+        }
+        
+        .tech-stack-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .tech-stack-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 1rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            color: var(--color-text-dark);
+        }
+        
+        .tech-stack-list li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border-color: var(--color-primary);
+        }
+        
+        .tech-stack-list li i {
+            font-size: 1.25rem;
+            width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        /* Social Media icon colors */
+        .tech-stack-list li i.fab.fa-facebook { color: #1877F2; }
+        .tech-stack-list li i.fab.fa-instagram { color: #E4405F; }
+        .tech-stack-list li i.fab.fa-linkedin { color: #0077B5; }
+        .tech-stack-list li i.fab.fa-twitter { color: #1DA1F2; }
+        .tech-stack-list li i.fab.fa-youtube { color: #FF0000; }
+        .tech-stack-list li i.fab.fa-tiktok { color: #000000; }
+        .tech-stack-list li i.fab.fa-pinterest { color: #BD081C; }
+        .tech-stack-list li i.fab.fa-snapchat { color: #FFFC00; }
+        .tech-stack-list li i.fas.fa-chart-line { color: #4285F4; }
+        .tech-stack-list li i.fas.fa-bullhorn { color: #FF6B35; }
+        .tech-stack-list li i.fas.fa-edit { color: #8E44AD; }
+        .tech-stack-list li i.fas.fa-calendar-alt { color: #27AE60; }
+        .tech-stack-list li i.fas.fa-users { color: #E74C3C; }
+        .tech-stack-list li i.fas.fa-comments { color: #3498DB; }
+        .tech-stack-list li i.fas.fa-camera { color: #FF7A00; }
+        .tech-stack-list li i.fas.fa-video { color: #9B59B6; }
+        .tech-stack-list li i.fas.fa-hashtag { color: #1DB954; }
+        .tech-stack-list li i.fas.fa-eye { color: #F39C12; }
+        .tech-stack-list li i.fas.fa-share-alt { color: #E67E22; }
+        .tech-stack-list li i.fas.fa-thumbs-up { color: #2ECC71; }
+        .tech-stack-list li i.fas.fa-clock { color: #34495E; }
+        .tech-stack-list li i.fas.fa-robot { color: #95A5A6; }
+        .tech-stack-list li i.fas.fa-bell { color: #F1C40F; }
+        
+        .tech-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tech-stat-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--color-primary);
+        }
+        
+        .tech-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        
+        .tech-stat-label {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+        
+        /* Modern Development Process Section */
+        .modern-process-section {
+            position: relative;
+            padding: 4rem 0 4rem 0;
+            margin: 2rem 0 0 0;
+            background: linear-gradient(135deg, #07074a 0%, #0e0e1d 50%, #07074a 100%);
+            overflow: hidden;
+        }
+        
+        .process-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .process-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(215, 38, 30, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(14, 14, 29, 0.3) 0%, transparent 50%);
+        }
+        
+        .process-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .process-particle {
+            position: absolute;
+            background: linear-gradient(45deg, rgba(215, 38, 30, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 50%;
+            animation: floatProcessParticle 8s ease-in-out infinite;
+        }
+        
+        .process-particle--1 {
+            width: 60px;
+            height: 60px;
+            top: 10%;
+            left: 10%;
+            animation-delay: -1s;
+        }
+        
+        .process-particle--2 {
+            width: 40px;
+            height: 40px;
+            top: 20%;
+            right: 15%;
+            animation-delay: -3s;
+        }
+        
+        .process-particle--3 {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -5s;
+        }
+        
+        .process-particle--4 {
+            width: 50px;
+            height: 50px;
+            top: 60%;
+            right: 25%;
+            animation-delay: -7s;
+        }
+        
+        @keyframes floatProcessParticle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(15px) rotate(240deg); }
+        }
+        
+        .section-header-process {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-badge-process {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-badge-process i {
+            color: var(--color-primary);
+        }
+        
+        .section-title-process {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .section-description-process {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .process-timeline {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+            transform: translateX(-50%);
+        }
+        
+        .process-step-modern {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .process-step-modern:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .process-step-modern:nth-child(even) .process-step-content {
+            text-align: right;
+        }
+        
+        .process-step-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .process-step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 12px 40px rgba(215, 38, 30, 0.4);
+        }
+        
+        .process-step-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .process-step-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-top: 1rem;
+        }
+        
+        .process-step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .process-step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+        
+        .process-step-duration {
+            padding: 0.5rem 1rem;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .process-step-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .process-step-deliverables h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .process-step-deliverables ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .process-step-deliverables li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .process-step-deliverables li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
+        .process-step-deliverables li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Process Stats */
+        .process-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .process-stat-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .process-stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border-color: var(--color-primary);
+        }
+        
+        .process-stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .process-stat-content {
+            color: white;
+        }
+        
+        .process-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tech-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step-modern {
+                flex-direction: row !important;
+                padding-left: 80px;
+            }
+            
+            .process-step-modern:nth-child(even) .process-step-content {
+                text-align: left;
+            }
+            
+            .process-step-indicator {
+                position: absolute;
+                left: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tech-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Include Header -->
     <div id="header-placeholder"></div>
     
+    <!-- Include Benchmark Hero -->
+    <div id="benchmark-hero-placeholder"></div>
 
+    <!-- Main Content -->
     <main class="main">
-        <nav class="breadcrumb">
-            <div class="container">
-                <ol class="breadcrumb__list">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../services.html">Services</a></li>
-                    <li>Social Media Management</li>
-                </ol>
-            </div>
-        </nav>
-
-        <section class="service-hero">
-            <div class="container">
-                <div class="service-hero__content">
-                    <div class="service-hero__text">
-                        <h1 class="service-hero__title">
-                            Social Media Management
-                            <span class="highlight">in India</span>
-                        </h1>
-                        <p class="service-hero__description">
-                            Build a powerful social media presence that connects with your audience and drives business growth. 
-                            Our expert team manages your social media accounts, creates engaging content, and runs targeted campaigns 
-                            across all major platforms.
-                        </p>
-                        <div class="service-hero__features">
-                            <div class="feature-tag">
-                                <i class="fab fa-facebook"></i>
-                                Multi-Platform
-                            </div>
-                            <div class="feature-tag">
-                                <i class="fas fa-heart"></i>
-                                Engagement Focused
-                            </div>
-                            <div class="feature-tag">
-                                <i class="fas fa-chart-line"></i>
-                                Growth Driven
-                            </div>
-                            <div class="feature-tag">
-                                <i class="fas fa-bullseye"></i>
-                                Brand Building
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-hero__image">
-                        <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing Strategy" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Service Details -->
         <section class="service-details">
             <div class="container">
-                <h2>Complete Social Media Solutions</h2>
-                <p>Transform your social media presence with our comprehensive management services designed to increase brand awareness, engage your audience, and drive meaningful business results.</p>
+                <div class="service-details__content">
+                    <div class="service-details__info">
+                        <h2>Complete Social Media Management Solutions</h2>
+                        <p>Build your brand, engage customers, and drive sales through strategic social media marketing. Our expert team manages your social media presence across all platforms, creating compelling content and fostering meaningful connections with your audience.</p>
+                        
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <div class="service-feature__icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="service-feature__content">
+                                    <h3>Content Strategy & Planning</h3>
+                                    <p>Develop comprehensive content calendars and strategic posting schedules to maximize engagement and reach.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <div class="service-feature__icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div class="service-feature__content">
+                                    <h3>Content Creation & Design</h3>
+                                    <p>Create visually stunning graphics, videos, and copy that resonate with your target audience across all platforms.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <div class="service-feature__icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="service-feature__content">
+                                    <h3>Community Management</h3>
+                                    <p>Actively engage with your audience, respond to comments and messages, and build strong customer relationships.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <div class="service-feature__icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="service-feature__content">
+                                    <h3>Social Media Advertising</h3>
+                                    <p>Create and manage targeted advertising campaigns to increase reach, drive traffic, and generate leads.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <div class="service-feature__icon">
+                                    <i class="fas fa-hashtag"></i>
+                                </div>
+                                <div class="service-feature__content">
+                                    <h3>Influencer Marketing</h3>
+                                    <p>Partner with relevant influencers to expand your reach and build authentic connections with new audiences.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <div class="service-feature__icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="service-feature__content">
+                                    <h3>Analytics & Reporting</h3>
+                                    <p>Track performance metrics and provide detailed insights to optimize your social media strategy for better results.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Technologies Section - Full Width -->
+        <section class="modern-technologies-section">
+            <div class="container">
+                <div class="section-header-modern">
+                    <div class="section-badge">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Social Media Technology Stack</span>
+                    </div>
+                    <h3 class="section-title-modern">
+                        Advanced Social Media Management Tools & Platforms
+                    </h3>
+                    <p class="section-description-modern">
+                        We use cutting-edge social media management tools and platforms to create, schedule, monitor, and analyze your social media presence across all channels for maximum engagement and ROI.
+                    </p>
+                </div>
                 
-                <div class="service-features">
-                    <div class="service-feature">
-                        <div class="service-feature__icon">
-                            <i class="fas fa-calendar-alt"></i>
+                <div class="tech-categories">
+                    <!-- Social Media Platforms -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tech-category-header">
+                            <h4 class="tech-category-title">Social Media Platforms</h4>
                         </div>
-                        <div class="service-feature__content">
-                            <h3>Content Planning & Creation</h3>
-                            <p>Strategic content calendars with engaging posts, graphics, and videos tailored for each platform.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-feature">
-                        <div class="service-feature__icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="service-feature__content">
-                            <h3>Community Management</h3>
-                            <p>Active engagement with your audience, responding to comments, messages, and building relationships.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-feature">
-                        <div class="service-feature__icon">
-                            <i class="fas fa-ad"></i>
-                        </div>
-                        <div class="service-feature__content">
-                            <h3>Social Media Advertising</h3>
-                            <p>Targeted ad campaigns on Facebook, Instagram, LinkedIn, and other platforms to reach your ideal customers.</p>
+                        <div class="tech-list-modern">
+                            <ul class="tech-stack-list">
+                                <li><i class="fab fa-facebook"></i> Facebook - Business Pages & Groups</li>
+                                <li><i class="fab fa-instagram"></i> Instagram - Posts, Stories & Reels</li>
+                                <li><i class="fab fa-linkedin"></i> LinkedIn - Professional Networking</li>
+                                <li><i class="fab fa-twitter"></i> Twitter - Real-time Engagement</li>
+                                <li><i class="fab fa-youtube"></i> YouTube - Video Content Marketing</li>
+                                <li><i class="fab fa-pinterest"></i> Pinterest - Visual Discovery</li>
+                                <li><i class="fab fa-tiktok"></i> TikTok - Short-form Video Content</li>
+                                <li><i class="fab fa-snapchat"></i> Snapchat - Ephemeral Content</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <div class="service-feature">
-                        <div class="service-feature__icon">
-                            <i class="fas fa-chart-bar"></i>
+                    <!-- Management Tools -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tech-category-header">
+                            <h4 class="tech-category-title">Management Tools</h4>
                         </div>
-                        <div class="service-feature__content">
-                            <h3>Analytics & Reporting</h3>
-                            <p>Detailed insights and monthly reports tracking growth, engagement, and ROI across all platforms.</p>
+                        <div class="tech-list-modern">
+                            <ul class="tech-stack-list">
+                                <li><i class="fas fa-calendar-alt"></i> Hootsuite - Social Media Scheduling</li>
+                                <li><i class="fas fa-buffer"></i> Buffer - Content Publishing Platform</li>
+                                <li><i class="fas fa-share"></i> Sprout Social - Social Media Management</li>
+                                <li><i class="fas fa-clock"></i> Later - Visual Content Calendar</li>
+                                <li><i class="fas fa-rocket"></i> SocialBee - Content Categorization</li>
+                                <li><i class="fas fa-chart-line"></i> Agorapulse - Social Media CRM</li>
+                                <li><i class="fas fa-comments"></i> Mention - Social Listening Tool</li>
+                                <li><i class="fas fa-eye"></i> Brand24 - Online Reputation Monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Content Creation Tools -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                        <div class="tech-category-header">
+                            <h4 class="tech-category-title">Content Creation Tools</h4>
+                        </div>
+                        <div class="tech-list-modern">
+                            <ul class="tech-stack-list">
+                                <li><i class="fas fa-palette"></i> Canva - Graphic Design Platform</li>
+                                <li><i class="fab fa-adobe"></i> Adobe Creative Suite - Professional Design</li>
+                                <li><i class="fas fa-video"></i> Loom - Video Creation Tool</li>
+                                <li><i class="fas fa-film"></i> Animoto - Video Marketing Platform</li>
+                                <li><i class="fas fa-image"></i> Unsplash - Stock Photography</li>
+                                <li><i class="fas fa-icons"></i> Flaticon - Icon Library</li>
+                                <li><i class="fas fa-camera"></i> VSCO - Photo Editing App</li>
+                                <li><i class="fas fa-music"></i> Epidemic Sound - Royalty-free Music</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technology Stats -->
+                <div class="tech-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">15+</div>
+                        <div class="tech-stat-label">Platform Management</div>
+                    </div>
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">400%</div>
+                        <div class="tech-stat-label">Engagement Increase</div>
+                    </div>
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">92%</div>
+                        <div class="tech-stat-label">Customer Satisfaction</div>
+                    </div>
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">24/7</div>
+                        <div class="tech-stat-label">Community Monitoring</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Development Process Section -->
+        <section class="modern-process-section section section--large">
+            <div class="process-background">
+                <div class="process-gradient"></div>
+                <div class="process-particles">
+                    <div class="process-particle process-particle--1"></div>
+                    <div class="process-particle process-particle--2"></div>
+                    <div class="process-particle process-particle--3"></div>
+                    <div class="process-particle process-particle--4"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header-process" data-aos="fade-up">
+                    <div class="section-badge-process">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Social Media Process</span>
+                    </div>
+                    <h2 class="section-title-process">
+                        Our Social Media Management Journey
+                    </h2>
+                    <p class="section-description-process">
+                        We follow a strategic social media management process that builds authentic connections with your audience and drives business results. From strategy development to community building, we're with you every step of the way.
+                    </p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">01</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Strategy & Audit</h3>
+                                <span class="process-step-duration">1-2 Weeks</span>
+                            </div>
+                            <p class="process-step-description">
+                                We analyze your current social media presence, understand your target audience, and develop a comprehensive strategy aligned with your business goals and brand voice.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Social Media Audit Report</li>
+                                    <li>Audience Analysis</li>
+                                    <li>Competitor Research</li>
+                                    <li>Content Strategy Framework</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">02</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Content Planning & Creation</h3>
+                                <span class="process-step-duration">Ongoing</span>
+                            </div>
+                            <p class="process-step-description">
+                                Our creative team develops engaging content calendars and creates high-quality visuals, videos, and copy that resonate with your audience and drive engagement.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Monthly Content Calendar</li>
+                                    <li>Custom Graphics & Videos</li>
+                                    <li>Engaging Copy & Captions</li>
+                                    <li>Branded Templates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">03</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Publishing & Community Management</h3>
+                                <span class="process-step-duration">Daily</span>
+                            </div>
+                            <p class="process-step-description">
+                                We publish content at optimal times, actively engage with your community, respond to comments and messages, and foster meaningful relationships with your followers.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Strategic Content Publishing</li>
+                                    <li>Active Community Engagement</li>
+                                    <li>Real-time Response Management</li>
+                                    <li>Crisis Communication Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="400">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">04</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Analytics & Optimization</h3>
+                                <span class="process-step-duration">Monthly</span>
+                            </div>
+                            <p class="process-step-description">
+                                We analyze performance metrics, track ROI, and continuously optimize our strategy to improve engagement, reach, and conversions across all platforms.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Monthly Performance Reports</li>
+                                    <li>Engagement Analytics</li>
+                                    <li>ROI Analysis</li>
+                                    <li>Strategy Optimization Plans</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="platforms-section">
-            <div class="container">
-                <h2>Platforms We Manage</h2>
-                <div class="platforms-grid">
-                    <div class="platform-item">
-                        <i class="fab fa-facebook"></i>
-                        <h3>Facebook</h3>
-                        <p>Build community and drive engagement</p>
-                    </div>
-                    <div class="platform-item">
-                        <i class="fab fa-instagram"></i>
-                        <h3>Instagram</h3>
-                        <p>Visual storytelling and brand awareness</p>
-                    </div>
-                    <div class="platform-item">
-                        <i class="fab fa-linkedin"></i>
-                        <h3>LinkedIn</h3>
-                        <p>Professional networking and B2B marketing</p>
-                    </div>
-                    <div class="platform-item">
-                        <i class="fab fa-twitter"></i>
-                        <h3>Twitter</h3>
-                        <p>Real-time engagement and thought leadership</p>
-                    </div>
-                    <div class="platform-item">
-                        <i class="fab fa-youtube"></i>
-                        <h3>YouTube</h3>
-                        <p>Video content and channel optimization</p>
-                    </div>
-                    <div class="platform-item">
-                        <i class="fab fa-pinterest"></i>
-                        <h3>Pinterest</h3>
-                        <p>Visual discovery and brand inspiration</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Boost Your Social Media Presence?</h2>
-                    <p>Let's create a social media strategy that builds your brand and grows your business.</p>
-                    <div class="cta-buttons">
-                        <a href="../contact.html" class="btn btn--primary btn--large">
-                            <i class="fas fa-share-alt"></i>
-                            Get Social Media Audit
-                        </a>
-                        <a href="tel:+919876543210" class="btn btn--outline btn--large">
-                            <i class="fas fa-phone"></i>
-                            Call Now: +91 9876543210
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Include CTA Premium -->
+        <div id="cta-premium-placeholder"></div>
     </main>
 
     <!-- Include Footer -->
     <div id="footer-placeholder"></div>
 
-    
-
-
+    <!-- Scripts -->
     <script src="../assets/js/script.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            loadComponent("header-placeholder", "../components/header.html");
-            loadComponent("footer-placeholder", "../components/footer.html");
-        });
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('../components/benchmark-hero.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('benchmark-hero-placeholder').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
     </script>
 </body>
 </html>

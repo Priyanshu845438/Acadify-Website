@@ -8,96 +8,616 @@
     <meta name="keywords" content="digital marketing India, SEO services, PPC advertising, social media marketing, content marketing, email marketing, Google Ads, Facebook marketing, online advertising India, digital marketing agency">
     <meta name="author" content="TechVision IT Solutions">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Digital Marketing Services in India | TechVision IT Solutions">
-    <meta property="og:description" content="Grow your business with expert digital marketing services. SEO, PPC, social media marketing, and more to increase your online visibility and sales.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://techvision.in/services/digital-marketing.html">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:wght@300;400;500;600;700&family=Vollkorn:wght@300;400;500;600;700&family=Orbitron:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Page-specific Styles -->
+    <style>
+        /* Modern Technologies Section */
+        .modern-technologies-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 50%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .modern-technologies-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(215, 38, 30, 0.02) 0%, transparent 70%),
+                radial-gradient(circle at 80% 20%, rgba(7, 7, 74, 0.02) 0%, transparent 70%);
+        }
+        
+        .section-header-modern {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-badge i {
+            color: var(--color-primary);
+        }
+        
+        .section-title-modern {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-description-modern {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tech-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tech-category {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-category:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--color-primary);
+        }
+        
+        .tech-category-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f3f4f6;
+            text-align: center;
+        }
+        
+        .tech-category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text-dark);
+            margin: 0;
+        }
+        
+        .tech-list-modern {
+            margin-top: 1rem;
+        }
+        
+        .tech-stack-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .tech-stack-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 1rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            color: var(--color-text-dark);
+        }
+        
+        .tech-stack-list li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border-color: var(--color-primary);
+        }
+        
+        .tech-stack-list li i {
+            font-size: 1.25rem;
+            width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        /* Marketing-specific icon colors */
+        .tech-stack-list li i.fab.fa-google { color: #4285F4; }
+        .tech-stack-list li i.fas.fa-search { color: #34A853; }
+        .tech-stack-list li i.fas.fa-chart-bar { color: #1A73E8; }
+        .tech-stack-list li i.fas.fa-link { color: #EA4335; }
+        .tech-stack-list li i.fas.fa-tachometer-alt { color: #FF9900; }
+        .tech-stack-list li i.fas.fa-eye { color: #5865F2; }
+        .tech-stack-list li i.fas.fa-rocket { color: #FF6B35; }
+        .tech-stack-list li i.fas.fa-chart-pie { color: #FF4785; }
+        .tech-stack-list li i.fab.fa-facebook { color: #1877F2; }
+        .tech-stack-list li i.fab.fa-linkedin { color: #0A66C2; }
+        .tech-stack-list li i.fab.fa-youtube { color: #FF0000; }
+        .tech-stack-list li i.fab.fa-twitter { color: #1DA1F2; }
+        .tech-stack-list li i.fas.fa-shopping-cart { color: #4285F4; }
+        .tech-stack-list li i.fas.fa-mobile-alt { color: #34A853; }
+        .tech-stack-list li i.fas.fa-bullhorn { color: #EA4335; }
+        .tech-stack-list li i.fas.fa-cogs { color: #FF7A00; }
+        .tech-stack-list li i.fas.fa-envelope { color: #FFE01B; }
+        .tech-stack-list li i.fas.fa-share-alt { color: #1DB954; }
+        .tech-stack-list li i.fas.fa-calendar-alt { color: #3B82F6; }
+        .tech-stack-list li i.fas.fa-bolt { color: #FF4A00; }
+        .tech-stack-list li i.fas.fa-chart-area { color: #00A1E0; }
+        .tech-stack-list li i.fas.fa-users { color: #8E44AD; }
+        .tech-stack-list li i.fas.fa-handshake { color: #5A67D8; }
+        
+        .tech-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tech-stat-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--color-primary);
+        }
+        
+        .tech-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        
+        .tech-stat-label {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+        
+        /* Modern Development Process Section */
+        .modern-process-section {
+            position: relative;
+            padding: 4rem 0 4rem 0;
+            margin: 2rem 0 0 0;
+            background: linear-gradient(135deg, #07074a 0%, #0e0e1d 50%, #07074a 100%);
+            overflow: hidden;
+        }
+        
+        .process-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .process-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(215, 38, 30, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(14, 14, 29, 0.3) 0%, transparent 50%);
+        }
+        
+        .process-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .process-particle {
+            position: absolute;
+            background: linear-gradient(45deg, rgba(215, 38, 30, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 50%;
+            animation: floatProcessParticle 8s ease-in-out infinite;
+        }
+        
+        .process-particle--1 {
+            width: 60px;
+            height: 60px;
+            top: 10%;
+            left: 10%;
+            animation-delay: -1s;
+        }
+        
+        .process-particle--2 {
+            width: 40px;
+            height: 40px;
+            top: 20%;
+            right: 15%;
+            animation-delay: -3s;
+        }
+        
+        .process-particle--3 {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -5s;
+        }
+        
+        .process-particle--4 {
+            width: 50px;
+            height: 50px;
+            top: 60%;
+            right: 25%;
+            animation-delay: -7s;
+        }
+        
+        @keyframes floatProcessParticle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(15px) rotate(240deg); }
+        }
+        
+        .section-header-process {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-badge-process {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-badge-process i {
+            color: var(--color-primary);
+        }
+        
+        .section-title-process {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .section-description-process {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .process-timeline {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+            transform: translateX(-50%);
+        }
+        
+        .process-step-modern {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .process-step-modern:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .process-step-modern:nth-child(even) .process-step-content {
+            text-align: right;
+        }
+        
+        .process-step-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .process-step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 12px 40px rgba(215, 38, 30, 0.4);
+        }
+        
+        .process-step-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .process-step-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-top: 1rem;
+        }
+        
+        .process-step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .process-step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+        
+        .process-step-duration {
+            padding: 0.5rem 1rem;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .process-step-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .process-step-deliverables h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .process-step-deliverables ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .process-step-deliverables li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .process-step-deliverables li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
+        .process-step-deliverables li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Process Stats */
+        .process-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .process-stat-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .process-stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            border-color: var(--color-primary);
+        }
+        
+        .process-stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .process-stat-content {
+            color: white;
+        }
+        
+        .process-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .process-stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tech-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .tech-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .process-step-modern {
+                flex-direction: row !important;
+                padding-left: 80px;
+            }
+            
+            .process-step-modern:nth-child(even) .process-step-content {
+                text-align: left;
+            }
+            
+            .process-step-indicator {
+                position: absolute;
+                left: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tech-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Include Header -->
     <div id="header-placeholder"></div>
-    <!-- Include Header -->
     
+    <!-- Include Benchmark Hero -->
+    <div id="benchmark-hero-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb">
-            <div class="container">
-                <ol class="breadcrumb__list">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../services.html">Services</a></li>
-                    <li>Digital Marketing</li>
-                </ol>
-            </div>
-        </nav>
-
-        <!-- Service Hero -->
-        <section class="service-hero">
-            <div class="container">
-                <div class="service-hero__content">
-                    <div class="service-hero__text">
-                        <h1 class="service-hero__title">
-                            Digital Marketing Services
-                            <span class="highlight">in India</span>
-                        </h1>
-                        <p class="service-hero__description">
-                            Accelerate your business growth with comprehensive digital marketing strategies. Our expert team 
-                            specializes in SEO, PPC, social media marketing, and content marketing to maximize your online presence 
-                            and drive qualified leads to your business.
-                        </p>
-                        <div class="service-hero__features">
-                            <div class="feature-tag">
-                                <i class="fas fa-chart-line"></i>
-                                Increased Traffic
-                            </div>
-                            <div class="feature-tag">
-                                <i class="fas fa-bullseye"></i>
-                                Targeted Campaigns
-                            </div>
-                            <div class="feature-tag">
-                                <i class="fas fa-users"></i>
-                                Better Engagement
-                            </div>
-                            <div class="feature-tag">
-                                <i class="fas fa-dollar-sign"></i>
-                                Higher ROI
-                            </div>
-                        </div>
-                        <div class="service-hero__cta">
-                            <a href="../contact.html" class="btn btn--primary btn--large">
-                                <i class="fas fa-rocket"></i>
-                                Boost Your Business
-                            </a>
-                            <a href="#service-details" class="btn btn--outline btn--large">
-                                <i class="fas fa-info-circle"></i>
-                                Learn More
-                            </a>
-                        </div>
-                    </div>
-                    <div class="service-hero__image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing Analytics Dashboard" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Service Details -->
-        <section class="service-details" id="service-details">
+        <section class="service-details">
             <div class="container">
                 <div class="service-details__content">
                     <div class="service-details__info">
                         <h2>Complete Digital Marketing Solutions</h2>
-                        <p>Transform your online presence with our data-driven digital marketing strategies. We combine creativity with analytics to deliver campaigns that not only reach your target audience but also convert them into loyal customers.</p>
+                        <p>Accelerate your business growth with comprehensive digital marketing strategies. Our expert team specializes in SEO, PPC, social media marketing, and content marketing to maximize your online presence and drive qualified leads to your business.</p>
                         
                         <div class="service-features">
                             <div class="service-feature">
@@ -105,8 +625,8 @@
                                     <i class="fas fa-search"></i>
                                 </div>
                                 <div class="service-feature__content">
-                                    <h3>Search Engine Optimization (SEO)</h3>
-                                    <p>Improve your website's visibility on Google and drive organic traffic with our proven SEO strategies.</p>
+                                    <h3>Search Engine Optimization</h3>
+                                    <p>Improve your website's visibility on search engines and drive organic traffic with our proven SEO strategies and techniques.</p>
                                 </div>
                             </div>
                             
@@ -115,8 +635,8 @@
                                     <i class="fas fa-mouse-pointer"></i>
                                 </div>
                                 <div class="service-feature__content">
-                                    <h3>Pay-Per-Click (PPC) Advertising</h3>
-                                    <p>Get immediate results with targeted Google Ads and social media advertising campaigns.</p>
+                                    <h3>Pay-Per-Click Advertising</h3>
+                                    <p>Generate immediate results with targeted PPC campaigns on Google Ads, Facebook, and other advertising platforms.</p>
                                 </div>
                             </div>
                             
@@ -126,17 +646,17 @@
                                 </div>
                                 <div class="service-feature__content">
                                     <h3>Social Media Marketing</h3>
-                                    <p>Build brand awareness and engage with your audience across all major social platforms.</p>
+                                    <p>Build brand awareness and engage with your audience across all social media platforms with strategic content and campaigns.</p>
                                 </div>
                             </div>
                             
                             <div class="service-feature">
                                 <div class="service-feature__icon">
-                                    <i class="fas fa-pen-nib"></i>
+                                    <i class="fas fa-pen-fancy"></i>
                                 </div>
                                 <div class="service-feature__content">
                                     <h3>Content Marketing</h3>
-                                    <p>Create valuable, engaging content that attracts and retains your target audience.</p>
+                                    <p>Create valuable, relevant content that attracts and retains your target audience while driving profitable customer action.</p>
                                 </div>
                             </div>
                             
@@ -146,122 +666,334 @@
                                 </div>
                                 <div class="service-feature__content">
                                     <h3>Email Marketing</h3>
-                                    <p>Nurture leads and maintain customer relationships with personalized email campaigns.</p>
+                                    <p>Nurture leads and maintain customer relationships with personalized email campaigns that drive conversions.</p>
                                 </div>
                             </div>
                             
                             <div class="service-feature">
                                 <div class="service-feature__icon">
-                                    <i class="fas fa-chart-bar"></i>
+                                    <i class="fas fa-chart-line"></i>
                                 </div>
                                 <div class="service-feature__content">
                                     <h3>Analytics & Reporting</h3>
-                                    <p>Track performance and optimize campaigns with detailed analytics and regular reports.</p>
+                                    <p>Track performance and optimize campaigns with detailed analytics and comprehensive reporting on all marketing activities.</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Technologies Section - Full Width -->
+        <section class="modern-technologies-section">
+            <div class="container">
+                <div class="section-header-modern">
+                    <div class="section-badge">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Digital Marketing Stack</span>
+                    </div>
+                    <h3 class="section-title-modern">
+                        Advanced Digital Marketing Technologies
+                    </h3>
+                    <p class="section-description-modern">
+                        We leverage the latest digital marketing technologies and platforms to build powerful, scalable, and results-driven marketing campaigns that deliver exceptional performance across all channels.
+                    </p>
+                </div>
+                
+                <div class="tech-categories">
+                    <!-- SEO & Analytics Tools -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tech-category-header">
+                            <h4 class="tech-category-title">SEO & Analytics Tools</h4>
+                        </div>
+                        <div class="tech-list-modern">
+                            <ul class="tech-stack-list">
+                                <li><i class="fab fa-google"></i> Google Analytics 4 - Advanced Web Analytics Platform</li>
+                                <li><i class="fas fa-search"></i> Google Search Console - SEO Performance Monitoring</li>
+                                <li><i class="fas fa-chart-bar"></i> SEMrush Pro - SEO & PPC Research Suite</li>
+                                <li><i class="fas fa-link"></i> Ahrefs Enterprise - Backlink Analysis Tool</li>
+                                <li><i class="fas fa-tachometer-alt"></i> Moz Pro - Complete SEO Toolkit</li>
+                                <li><i class="fas fa-eye"></i> Screaming Frog - Technical SEO Crawler</li>
+                                <li><i class="fas fa-rocket"></i> GTmetrix - Page Speed Optimization</li>
+                                <li><i class="fas fa-chart-pie"></i> Hotjar - User Behavior Analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Advertising Platforms -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tech-category-header">
+                            <h4 class="tech-category-title">Advertising Platforms</h4>
+                        </div>
+                        <div class="tech-list-modern">
+                            <ul class="tech-stack-list">
+                                <li><i class="fab fa-google"></i> Google Ads - Search & Display Advertising</li>
+                                <li><i class="fab fa-facebook"></i> Meta Business - Facebook & Instagram Ads</li>
+                                <li><i class="fab fa-linkedin"></i> LinkedIn Campaign Manager - B2B Advertising</li>
+                                <li><i class="fab fa-youtube"></i> YouTube Ads - Video Marketing Platform</li>
+                                <li><i class="fab fa-twitter"></i> Twitter Ads - Real-time Engagement</li>
+                                <li><i class="fas fa-shopping-cart"></i> Google Shopping - E-commerce Marketing</li>
+                                <li><i class="fas fa-mobile-alt"></i> Mobile Advertising - In-app Promotion</li>
+                                <li><i class="fas fa-bullhorn"></i> Display Networks - Brand Awareness</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Marketing Automation -->
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                        <div class="tech-category-header">
+                            <h4 class="tech-category-title">Marketing Automation</h4>
+                        </div>
+                        <div class="tech-list-modern">
+                            <ul class="tech-stack-list">
+                                <li><i class="fas fa-cogs"></i> HubSpot Enterprise - Inbound Marketing Platform</li>
+                                <li><i class="fas fa-envelope"></i> Mailchimp Pro - Email Marketing Automation</li>
+                                <li><i class="fas fa-share-alt"></i> Hootsuite Enterprise - Social Media Management</li>
+                                <li><i class="fas fa-calendar-alt"></i> Buffer Business - Social Scheduling Tool</li>
+                                <li><i class="fas fa-bolt"></i> Zapier Professional - Workflow Automation</li>
+                                <li><i class="fas fa-chart-area"></i> Salesforce Pardot - B2B Marketing Automation</li>
+                                <li><i class="fas fa-users"></i> Active Campaign - Customer Experience Platform</li>
+                                <li><i class="fas fa-handshake"></i> Marketo Engage - Lead Management System</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technology Stats -->
+                <div class="tech-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">25+</div>
+                        <div class="tech-stat-label">Marketing Technologies</div>
+                    </div>
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">300%</div>
+                        <div class="tech-stat-label">Average ROI Increase</div>
+                    </div>
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">98%</div>
+                        <div class="tech-stat-label">Campaign Success Rate</div>
+                    </div>
+                    <div class="tech-stat-item">
+                        <div class="tech-stat-number">24/7</div>
+                        <div class="tech-stat-label">Performance Monitoring</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Development Process Section -->
+        <section class="modern-process-section section section--large">
+            <div class="process-background">
+                <div class="process-gradient"></div>
+                <div class="process-particles">
+                    <div class="process-particle process-particle--1"></div>
+                    <div class="process-particle process-particle--2"></div>
+                    <div class="process-particle process-particle--3"></div>
+                    <div class="process-particle process-particle--4"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="section-header-process" data-aos="fade-up">
+                    <div class="section-badge-process">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Marketing Process</span>
+                    </div>
+                    <h2 class="section-title-process">
+                        Our Digital Marketing Journey
+                    </h2>
+                    <p class="section-description-process">
+                        We follow a proven, data-driven marketing process that ensures measurable results and maximum ROI. From strategy development to campaign optimization, we're with you every step of the way to achieve your business goals.
+                    </p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">01</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Strategy & Planning</h3>
+                                <span class="process-step-duration">1-2 Weeks</span>
+                            </div>
+                            <p class="process-step-description">
+                                We start by understanding your business objectives, target audience, and competitive landscape. Our team conducts market research, defines marketing goals, and creates a comprehensive campaign strategy.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Marketing Strategy Document</li>
+                                    <li>Market Research Report</li>
+                                    <li>Audience Persona Development</li>
+                                    <li>Campaign Architecture Plan</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="service-details__stats">
-                        <h3>Our Success Numbers</h3>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">250%</div>
-                                <div class="stat-label">Average Traffic Increase</div>
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">02</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-pencil-ruler"></i>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">180%</div>
-                                <div class="stat-label">ROI Improvement</div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Creative Development</h3>
+                                <span class="process-step-duration">2-3 Weeks</span>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">95%</div>
-                                <div class="stat-label">Client Retention Rate</div>
+                            <p class="process-step-description">
+                                Our creative team develops compelling campaign assets and content that resonates with your target audience. We create visuals, copy, and landing pages that drive conversions.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Creative Asset Development</li>
+                                    <li>Content Calendar Creation</li>
+                                    <li>Landing Page Design</li>
+                                    <li>Brand Messaging Framework</li>
+                                </ul>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">500+</div>
-                                <div class="stat-label">Successful Campaigns</div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">03</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Campaign Implementation</h3>
+                                <span class="process-step-duration">1-2 Weeks</span>
+                            </div>
+                            <p class="process-step-description">
+                                Our experts implement campaigns across all selected digital channels. We set up tracking systems, configure automation workflows, and ensure optimal performance across platforms.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Multi-Channel Campaign Setup</li>
+                                    <li>Analytics Implementation</li>
+                                    <li>Automation Configuration</li>
+                                    <li>Performance Tracking Setup</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-modern" data-aos="fade-up" data-aos-delay="400">
+                        <div class="process-step-indicator">
+                            <div class="process-step-number">04</div>
+                            <div class="process-step-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="process-step-content">
+                            <div class="process-step-header">
+                                <h3 class="process-step-title">Launch & Optimization</h3>
+                                <span class="process-step-duration">Ongoing</span>
+                            </div>
+                            <p class="process-step-description">
+                                We launch your campaigns and continuously monitor performance. Our team provides ongoing optimization, detailed reporting, and strategic recommendations for sustained growth.
+                            </p>
+                            <div class="process-step-deliverables">
+                                <h4>Key Deliverables:</h4>
+                                <ul>
+                                    <li>Campaign Launch & Monitoring</li>
+                                    <li>Performance Reports</li>
+                                    <li>Continuous Optimization</li>
+                                    <li>Growth Strategy Updates</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="process-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Digital Marketing Process</h2>
-                    <p>We follow a strategic approach to ensure maximum impact and measurable results for your business.</p>
-                </div>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="process-step__number">1</div>
-                        <div class="process-step__content">
-                            <h3>Strategy Development</h3>
-                            <p>Analyzing your business, competition, and target audience to create a customized marketing strategy.</p>
+                
+                <!-- Process Stats -->
+                <div class="process-stats" data-aos="fade-up" data-aos-delay="500">
+                    <div class="process-stat-item">
+                        <div class="process-stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="process-stat-content">
+                            <div class="process-stat-number">95%</div>
+                            <div class="process-stat-label">On-Time Campaign Launch</div>
                         </div>
                     </div>
-                    <div class="process-step">
-                        <div class="process-step__number">2</div>
-                        <div class="process-step__content">
-                            <h3>Campaign Setup</h3>
-                            <p>Setting up tracking, creating compelling ad copies, and launching targeted campaigns across platforms.</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step__number">3</div>
-                        <div class="process-step__content">
-                            <h3>Optimization</h3>
-                            <p>Continuously monitoring and optimizing campaigns for better performance and higher conversions.</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-step__number">4</div>
-                        <div class="process-step__content">
-                            <h3>Reporting & Analysis</h3>
-                            <p>Providing detailed reports and insights to track ROI and plan future marketing initiatives.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Grow Your Business Online?</h2>
-                    <p>Let's create a digital marketing strategy that drives real results for your business.</p>
-                    <div class="cta-buttons">
-                        <a href="../contact.html" class="btn btn--primary btn--large">
+                    <div class="process-stat-item">
+                        <div class="process-stat-icon">
                             <i class="fas fa-chart-line"></i>
-                            Get Marketing Strategy
-                        </a>
-                        <a href="tel:+919876543210" class="btn btn--outline btn--large">
-                            <i class="fas fa-phone"></i>
-                            Call Now: +91 9876543210
-                        </a>
+                        </div>
+                        <div class="process-stat-content">
+                            <div class="process-stat-number">300%</div>
+                            <div class="process-stat-label">Average ROI Increase</div>
+                        </div>
+                    </div>
+                    <div class="process-stat-item">
+                        <div class="process-stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="process-stat-content">
+                            <div class="process-stat-number">98%</div>
+                            <div class="process-stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                    <div class="process-stat-item">
+                        <div class="process-stat-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="process-stat-content">
+                            <div class="process-stat-number">500+</div>
+                            <div class="process-stat-label">Campaigns Launched</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Include CTA Premium -->
+        <div id="cta-premium-placeholder"></div>
     </main>
 
     <!-- Include Footer -->
     <div id="footer-placeholder"></div>
 
-    <!-- Include Footer -->
-    
-
-    <!-- Custom JavaScript -->
-
+    <!-- Scripts -->
     <script src="../assets/js/script.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            loadComponent("header-placeholder", "../components/header.html");
-            loadComponent("footer-placeholder", "../components/footer.html");
-        });
+        // Load header and footer
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('../components/benchmark-hero.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('benchmark-hero-placeholder').innerHTML = data;
+            });
+
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        fetch('../components/cta-premium.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('cta-placeholder').innerHTML = data;
+            });
     </script>
 </body>
 </html>
