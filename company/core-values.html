@@ -62,54 +62,8 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Page Hero Section -->
-        <section class="page-hero gradient-bg">
-            <div class="container">
-                <div class="page-hero__content">
-                    <nav class="breadcrumb-modern" data-aos="fade-up">
-                        <a href="../index.html" class="breadcrumb-modern__link">
-                            <i class="fas fa-home"></i>
-                            <span>Home</span>
-                        </a>
-                        <span class="breadcrumb-modern__separator">
-                            <i class="fas fa-chevron-right"></i>
-                        </span>
-                        <a href="../company/overview.html" class="breadcrumb-modern__link">
-                            <span>Company</span>
-                        </a>
-                        <span class="breadcrumb-modern__separator">
-                            <i class="fas fa-chevron-right"></i>
-                        </span>
-                        <span class="breadcrumb-modern__current">Core Values</span>
-                    </nav>
-                    <h1 class="page-hero__title" data-aos="fade-up" data-aos-delay="100">Our Core Values</h1>
-                    <p class="page-hero__description" data-aos="fade-up" data-aos-delay="200">
-                        The foundational principles that guide every decision we make and every solution we deliver for our clients across India and beyond.
-                    </p>
-                    <div class="page-hero__stats" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-item">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">Core Values</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Projects Guided</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Team Commitment</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="page-hero__decoration">
-                <div class="floating-shapes">
-                    <div class="shape shape-1"></div>
-                    <div class="shape shape-2"></div>
-                    <div class="shape shape-3"></div>
-                </div>
-            </div>
-        </section>
+        <!-- Include Benchmark Hero Component -->
+        <div id="benchmark-hero-placeholder"></div>
 
         <!-- Core Values Grid Section -->
         <section class="section">
@@ -327,53 +281,8 @@
             </div>
         </section>
 
-        <!-- Call to Action - Premium -->
-        <section class="overview-cta-section section section--large bg-gradient">
-            <div class="overview-cta-background">
-                <div class="cta-gradient"></div>
-                <div class="cta-particles">
-                    <div class="particle particle--1"></div>
-                    <div class="particle particle--2"></div>
-                    <div class="particle particle--3"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="overview-cta-content" data-aos="zoom-in">
-                    <div class="cta-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
-                    <p class="cta-description">
-                        Join 500+ successful businesses who have already transformed their operations with TechVision. 
-                        Let's discuss how we can accelerate your digital journey.
-                    </p>
-                    <div class="cta-actions">
-                        <a href="../contact.html" class="btn btn--primary btn--xl">
-                            <i class="fas fa-calendar-check"></i>
-                            Schedule Free Consultation
-                        </a>
-                        <a href="../portfolio.html" class="btn btn--outline-white btn--xl">
-                            <i class="fas fa-eye"></i>
-                            Explore Our Success Stories
-                        </a>
-                    </div>
-                    <div class="cta-trust-indicators">
-                        <div class="trust-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>100% Confidential</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-clock"></i>
-                            <span>24/7 Support</span>
-                        </div>
-                        <div class="trust-item">
-                            <i class="fas fa-handshake"></i>
-                            <span>No Long-term Contracts</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Include Call to Action Premium Component -->
+        <div id="cta-premium-placeholder"></div>
     </main>
 
     <!-- Include Footer -->
@@ -397,6 +306,19 @@
             // Load components
             loadComponent("header-placeholder", "../components/header.html");
             loadComponent("footer-placeholder", "../components/footer.html");
+            loadComponent("cta-premium-placeholder", "../components/cta-premium.html");
+            loadComponent("benchmark-hero-placeholder", "../components/benchmark-hero.html");
+            
+            // Customize benchmark hero for Core Values page
+            setTimeout(() => {
+                const pageTitle = document.querySelector('.benchmark-page-title');
+                const titleText = document.querySelector('.benchmark-title-text');
+                const descriptionText = document.querySelector('.benchmark-description-text');
+                
+                if (pageTitle) pageTitle.textContent = 'Core Values';
+                if (titleText) titleText.textContent = 'Our Core Values';
+                if (descriptionText) descriptionText.textContent = 'The foundational principles that guide every decision we make and every solution we deliver for our clients across India and beyond.';
+            }, 100);
         });
     </script>
 </body>

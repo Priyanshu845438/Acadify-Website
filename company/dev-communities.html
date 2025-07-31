@@ -59,109 +59,8 @@
 
     <!-- Main Content -->
     <main class="main">
-        <!-- Ultra-Modern Hero Section -->
-        <section class="dev-communities-hero section section--hero">
-            <div class="dev-communities-hero__background">
-                <div class="geometric-pattern"></div>
-                <div class="floating-elements">
-                    <div class="float-element float-element--1"></div>
-                    <div class="float-element float-element--2"></div>
-                    <div class="float-element float-element--3"></div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="dev-communities-hero__content">
-                    <div class="dev-communities-hero__text" data-aos="fade-up">
-                        <div class="breadcrumb-modern">
-                            <a href="../index.html" class="breadcrumb-modern__link">
-                                <i class="fas fa-home"></i>
-                                Home
-                            </a>
-                            <span class="breadcrumb-modern__separator">
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                            <a href="../company/overview.html" class="breadcrumb-modern__link">Company</a>
-                            <span class="breadcrumb-modern__separator">
-                                <i class="fas fa-chevron-right"></i>
-                            </span>
-                            <span class="breadcrumb-modern__current">Developer Communities</span>
-                        </div>
-                        
-                        <div class="hero-badge">
-                            <i class="fas fa-code"></i>
-                            <span>India's Largest Tech Community Network</span>
-                        </div>
-                        
-                        <h1 class="dev-communities-hero__title">
-                            Connect, Learn & Grow with
-                            <span class="title-highlight">India's Top Developers</span>
-                        </h1>
-                        
-                        <p class="dev-communities-hero__description">
-                            Join our vibrant ecosystem of 3500+ developers, designers, and tech enthusiasts across India. 
-                            Participate in cutting-edge discussions, collaborative projects, and career-defining networking 
-                            opportunities that shape the future of technology.
-                        </p>
-                        
-                        <div class="hero-stats">
-                            <div class="hero-stat">
-                                <div class="hero-stat__number">3,500+</div>
-                                <div class="hero-stat__label">Active Members</div>
-                            </div>
-                            <div class="hero-stat">
-                                <div class="hero-stat__number">6</div>
-                                <div class="hero-stat__label">Tech Communities</div>
-                            </div>
-                            <div class="hero-stat">
-                                <div class="hero-stat__number">50+</div>
-                                <div class="hero-stat__label">Monthly Events</div>
-                            </div>
-                        </div>
-                        
-                        <div class="hero-actions">
-                            <a href="#communities" class="btn btn--primary btn--large">
-                                <i class="fas fa-users"></i>
-                                Join Communities
-                            </a>
-                            <a href="#events" class="btn btn--outline btn--large">
-                                <i class="fas fa-calendar-alt"></i>
-                                View Events
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="dev-communities-hero__visual" data-aos="fade-left" data-aos-delay="200">
-                        <div class="hero-image-container">
-                            <div class="hero-image-frame">
-                                <img src="https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                                     alt="Developer Community Meetup"
-                                     class="hero-image">
-                            </div>
-                            <div class="achievement-cards">
-                                <div class="achievement-card achievement-card--1">
-                                    <div class="achievement-icon">
-                                        <i class="fas fa-code-branch"></i>
-                                    </div>
-                                    <div class="achievement-text">
-                                        <div class="achievement-number">200+</div>
-                                        <div class="achievement-label">Open Source Projects</div>
-                                    </div>
-                                </div>
-                                <div class="achievement-card achievement-card--2">
-                                    <div class="achievement-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="achievement-text">
-                                        <div class="achievement-number">1,000+</div>
-                                        <div class="achievement-label">Learning Hours</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Include Benchmark Hero Component -->
+        <div id="benchmark-hero-placeholder"></div>
 
         <!-- Modern Communities Grid Section -->
         <section id="communities" class="modern-communities-section section section--large">
@@ -860,6 +759,9 @@
                 </div>
             </div>
         </section>
+
+        <!-- Include Call to Action Premium Component -->
+        <div id="cta-premium-placeholder"></div>
     </main>
 
     <!-- Include Footer -->
@@ -872,6 +774,19 @@
         document.addEventListener("DOMContentLoaded", function() {
             loadComponent("header-placeholder", "../components/header.html");
             loadComponent("footer-placeholder", "../components/footer.html");
+            loadComponent("cta-premium-placeholder", "../components/cta-premium.html");
+            loadComponent("benchmark-hero-placeholder", "../components/benchmark-hero.html");
+            
+            // Customize benchmark hero for Developer Communities page
+            setTimeout(() => {
+                const pageTitle = document.querySelector('.benchmark-page-title');
+                const titleText = document.querySelector('.benchmark-title-text');
+                const descriptionText = document.querySelector('.benchmark-description-text');
+                
+                if (pageTitle) pageTitle.textContent = 'Developer Communities';
+                if (titleText) titleText.textContent = 'Connect, Learn & Grow with India\'s Top Developers';
+                if (descriptionText) descriptionText.textContent = 'Join our vibrant ecosystem of 3500+ developers, designers, and tech enthusiasts across India. Participate in cutting-edge discussions, collaborative projects, and career-defining networking opportunities.';
+            }, 100);
         });
     </script>
 </body>
